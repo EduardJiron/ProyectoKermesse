@@ -634,7 +634,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  width: 100%;
+  width: 85%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -7322,6 +7322,7 @@ textarea.form-control-lg {
 
 .mt-4 {
   margin-top: 1.5rem !important;
+  color:white;
 }
 
 .mt-5 {
@@ -11311,7 +11312,27 @@ body:before {
   width: 100%;
   background-color: #2a5555;
   opacity: 0.7;
-  z-index: 1;
+  z-index: -1;
+}
+
+.mastheade{
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+  
 }
 
 video.bg-video {
@@ -11323,7 +11344,7 @@ video.bg-video {
   width: auto;
   height: auto;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 0;
+  z-index: -1;
 }
 
 @media (pointer: coarse) and (hover: none) {

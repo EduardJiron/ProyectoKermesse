@@ -1,10 +1,17 @@
+
+
+
+
+
+
 <?php
 
 include 'datos/DtParroquia.php';
 include 'entidades/Parroquia.php';
 
 $dt = new DtParroquia();
-$user= new Parroquia();
+$par= new Parroquia();
+
 
 
 
@@ -28,9 +35,9 @@ if(isset($varMsj))
         <title>Gestión Usuarios</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/styles7.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styles.css">
+       
+        <link href="css/styles6.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles7.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
@@ -68,7 +75,7 @@ if(isset($varMsj))
             </ul>
         </nav>
         <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-        <div class="masthead">
+        <div class="mastheade">
             
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -143,10 +150,10 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de las parroquia</h1>
+                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Parroquia</li>
+                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
@@ -162,15 +169,19 @@ if(isset($varMsj))
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
+
+                                <label> 
+                              
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Nombre</th>
+                                            <th>Parroquia</th>
                                             <th>direccion</th>
                                             <th>telefono</th>
                                             <th>parroco</th>
                                             <th>logo</th>
-                                            <th>sitioWeb</th>
+                                            <th>sitio web</th>
+                                            <th>Opciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -193,8 +204,8 @@ if(isset($varMsj))
                                             <td>   <?php echo $r->__GET("telefono"); ?></td>
                                             <td>   <?php echo $r->__GET("parroco"); ?></td>
                                             <td>   <?php echo $r->__GET("logo"); ?></td>
-                                            <td>    <?php echo $r->__GET("sitio_web"); ?></td>
-                                          
+                                            <td>   <?php echo $r->__GET("sitio_web"); ?></td>
+                                            
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
@@ -222,6 +233,7 @@ endforeach;
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
+                                            <th>Opciones</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </tfoot>

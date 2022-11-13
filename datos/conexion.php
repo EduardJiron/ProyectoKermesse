@@ -15,9 +15,9 @@ class Conexion
     public function conectar()
 	{
         $serverName = 'localhost';
-        $dbName = 'dbkermesse';
+        $dbName = 'webk';
         $userName = 'root';
-        $pwd = 'Temporal2022++';
+        $pwd = 'Temporal2022+';
 
 		try
 		{

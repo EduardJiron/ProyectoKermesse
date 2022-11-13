@@ -34,9 +34,9 @@ if(isset($varMsj))
         <title>Gestión Usuarios</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/styles3.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styles5.css">
+       
+        <link href="css/styles6.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles7.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
@@ -74,7 +74,7 @@ if(isset($varMsj))
             </ul>
         </nav>
         <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-        <div class="masthead">
+        <div class="mastheade">
             
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -168,6 +168,22 @@ if(isset($varMsj))
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
+
+                                <label> 
+                                <select>    
+                                <?php
+        
+                                foreach ($dt->listUsuario() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
+                                    
+                                   
+
+                                    <?php
+                                endforeach;
+                                ?>
+                                 </select>
                                     <thead>
                                         <tr>
                                             <th>id</th>
@@ -176,6 +192,7 @@ if(isset($varMsj))
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
+                                            <th>Opciones</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </thead>
@@ -227,6 +244,7 @@ endforeach;
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
+                                            <th>Opciones</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </tfoot>

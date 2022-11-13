@@ -29,6 +29,7 @@ class DtUsuario extends conexion
                             $usu->__SET('apellidos', $r->apellidos);
                             $usu->__SET('email', $r->email);
                             $usu->__SET('pwd', $r->pwd);
+                            
 
                             $result[]=$usu;
                     }
