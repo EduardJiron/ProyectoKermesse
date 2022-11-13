@@ -1,3 +1,28 @@
+
+
+
+
+
+
+<?php
+
+include 'datos/DtUsuario.php';
+include 'entidades/Usuarios.php';
+
+$dt = new DtUsuario();
+$user= new Usuario();
+
+
+
+//variable de control msj
+$varMsj = 0;
+if(isset($varMsj))
+{ 
+  $varMsj = $_GET['msj'];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,18 +31,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
-       
-        <link rel="stylesheet" href="css/styles3.css">
-        <link rel="stylesheet" href="css/styles4.css">
-
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-         <!-- Font Awesome -->
-         
+        <title>Gestión Usuarios</title>
+        <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
+        <!-- Plantilla -->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles3.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles5.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
-       
+        <link rel="stylesheet" href="./DataTables/datatables.min.css">
+        <link rel="stylesheet" href="./DataTables/Responsive-2.3.0/css/responsive.bootstrap5.min.css">
+        <link rel="stylesheet" href="./DataTables/Buttons-2.2.3/css/buttons.bootstrap.min.css">
         <!-- jAlert css  -->
         <link rel="stylesheet" href="./jAlert/dist/jAlert.css" />
+        
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -45,6 +73,9 @@
                 </li>
             </ul>
         </nav>
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <div class="masthead">
+            
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -55,39 +86,35 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div class="sb-sidenav-menu-heading">Usuario</div>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Gestionar usuario
+                                Layouts
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Crear Usuario</a>
-                                    
-                                    <a class="nav-link" href="layout-sidenav-light.html">Editar Usuario</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Borrar Usuario</a>
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Listado
+                                Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Listar Usuario
+                                        Authentication
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    
-    
-                                   <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <!--<nav class="sb-sidenav-menu-nested nav">
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Login</a>
                                             <a class="nav-link" href="register.html">Register</a>
                                             <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav> -->
+                                        </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         Error
@@ -120,10 +147,9 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-               <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-                <div class="masthead">
-                <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="color:white;">Gestionar Datos de Usuarios</h1>
+               
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
                             <li class="breadcrumb-item active">Gestión de Usuarios</li>
@@ -154,13 +180,35 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        <?php
+
+                                        foreach ($dt->listUsuario() as $r):
+                                        ?>
+
+
+
+
+
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
+                                            <td>
+                                        <?php echo $r->__GET("id_usuario"); ?>
+                                            </td>
+                                            <td>
+                                        <?php echo $r->__GET("usuario"); ?>
+                                        
+                                            
+                                        </td>
+                                            <td>   <?php echo $r->__GET("nombres"); ?>   </td>
+                                            <td>   <?php echo $r->__GET("apellidos"); ?></td>
+                                            <td>   <?php echo $r->__GET("email"); ?></td>
                                             <td>2011/04/25</td>
                                             <td>$320,800</td>
+
+                                                <?php
+
+                                                endforeach;
+                                                ?>
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
@@ -189,15 +237,165 @@
                             </div>
                         </div>
                     </div>
-        </div>
+               
+              
+            </div>
 </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        </div>
+        <!-- jQuery -->
         <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="DataTables/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+       
+        <!-- Descargar el bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+       
+        <!-- JS DATATABLES -->
+        <script src="./DataTables/datatables.min.js"></script>
+        <!--<script src="./DataTables/Responsive-2.3.0/js/responsive.bootstrap5.min.js"></script>-->
+        <script src="./DataTables/Responsive-2.3.0/js/dataTables.responsive.min.js"></script>
+        <script src="./DataTables/Responsive-2.3.0/js/responsive.dataTables.min.js"></script>
+        <script src="./DataTables/Buttons-2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="./DataTables/Buttons-2.2.3/js/buttons.bootstrap5.min.js"></script>
+        <script src="./DataTables/JSZip-2.5.0/jszip.min.js"></script>
+        <script src="./DataTables/pdfmake-0.1.36/pdfmake.min.js"></script>
+        <script src="./DataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <script src="./DataTables/Buttons-2.2.3/js/buttons.html5.min.js"></script>
+        <script src="./DataTables/Buttons-2.2.3/js/buttons.print.min.js"></script>
+        <script src="./DataTables/Buttons-2.2.3/js/buttons.colVis.min.js"></script>
+
+        <!--script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>-->
+        <script src="fontawesome-free-6.2.0/js/all.min.js"></script>
+
+         <!-- jAlert js -->
+        <script src="./jAlert/dist/jAlert.min.js"></script>
+        <script src="./jAlert/dist/jAlert-functions.min.js"> //optional!!</script>
+
+
+<script>
+
+$(document).ready(function ()
+{
+    /////////// VARIABLE DE CONTROL MSJ ///////////
+    var mensaje = 0;
+    mensaje = "<?php echo $varMsj ?>";
+
+    if(mensaje == "1")
+    {
+        successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+
+
+/////////// DATATABLE ///////////
+$(document).ready( function (){
+    
+    $("#tbl_usuarios").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["excel", "pdf", "print"],
+      "language": {
+        "aria": {
+        "sortAscending": "Activar para ordenar la columna de manera ascendente",
+        "sortDescending": "Activar para ordenar la columna de manera descendente"
+    },
+    "buttons": {
+        "collection": "Colección",
+        "colvis": "Visibilidad",
+        "colvisRestore": "Restaurar visibilidad",
+        "copy": "Copiar",
+        "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
+        "copySuccess": {
+            "1": "Copiada 1 fila al portapapeles",
+            "_": "Copiadas %d fila al portapapeles"
+        },
+        "copyTitle": "Copiar al portapapeles",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Mostrar todas las filas",
+            "_": "Mostrar %d filas"
+        },
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "createState": "Crear Estado",
+        "removeAllStates": "Borrar Todos los Estados",
+        "removeState": "Borrar Estado",
+        "renameState": "Renombrar Estado",
+        "savedStates": "Guardar Estado",
+        "stateRestore": "Restaurar Estado",
+        "updateState": "Actualizar Estado"
+    },
+    "infoThousands": ",",
+    "loadingRecords": "Cargando...",
+    "paginate": {
+        "first": "Primero",
+        "last": "Último",
+        "next": "Siguiente",
+        "previous": "Anterior"
+    },
+    "processing": "Procesando...",
+    "search": "Buscar:",
+    "searchBuilder": {
+        "add": "Añadir condición",
+        "button": {
+            "0": "Constructor de búsqueda",
+            "_": "Constructor de búsqueda (%d)"
+        },
+        "clearAll": "Borrar todo",
+        "condition": "Condición",
+        "deleteTitle": "Eliminar regla de filtrado",
+        "leftTitle": "Criterios anulados",
+        "logicAnd": "Y",
+        "logicOr": "O",
+        "rightTitle": "Criterios de sangría",
+        "title": {
+            "0": "Constructor de búsqueda",
+            "_": "Constructor de búsqueda (%d)"
+        },
+        "value": "Valor",
+        "data": "Datos"
+    },
+    "searchPanes": {
+        "clearMessage": "Borrar todo",
+        "collapse": {
+            "0": "Paneles de búsqueda",
+            "_": "Paneles de búsqueda (%d)"
+        },
+        "count": "{total}",
+        "emptyPanes": "Sin paneles de búsqueda",
+        "loadMessage": "Cargando paneles de búsqueda",
+        "title": "Filtros Activos - %d",
+        "countFiltered": "{shown} ({total})",
+        "collapseMessage": "Colapsar",
+        "showMessage": "Mostrar Todo"
+    },
+    "decimal": ".",
+    "emptyTable": "No hay datos disponibles en la tabla",
+    "zeroRecords": "No se encontraron coincidencias",
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+    "infoFiltered": "(Filtrado de _MAX_ total de entradas)",
+    "lengthMenu": "Mostrar _MENU_ entradas",
+    "stateRestore": {
+        "removeTitle": "Eliminar",
+        "creationModal": {
+            "search": "Buscar"
+        }
+    },
+    "infoEmpty": "No hay datos para mostrar"
+        }
+    }).buttons().container().appendTo('#tbl_usuarios_wrapper .col-md-6:eq(0)');
+
+});
+
+
+
+});//FIN  $(document).ready()
+
+
+</script>
+
+
+
 
     </body>
 </html>
