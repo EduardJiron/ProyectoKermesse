@@ -170,9 +170,9 @@ if(isset($varMsj))
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
+                                            <th>id</th>
+                                            <th>Nombre</th>
+                                            <th>apellido</th>
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
@@ -185,10 +185,6 @@ if(isset($varMsj))
 
                                         foreach ($dt->listUsuario() as $r):
                                         ?>
-
-
-
-
 
                                         <tr>
                                             <td>
@@ -205,10 +201,6 @@ if(isset($varMsj))
                                             <td>2011/04/25</td>
                                             <td>$320,800</td>
 
-                                                <?php
-
-                                                endforeach;
-                                                ?>
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
@@ -220,6 +212,11 @@ if(isset($varMsj))
                                                     <i class="fa-solid fa-user-minus"></i> 
                                                 </a>
                                             </td>
+                                            
+                                            <?php
+
+endforeach;
+?>
                                         </tr>
                                     </tbody>
                                     <tfoot>
