@@ -11359,8 +11359,8 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 #inputEmail{
- width: 424px;
-
+  width: 455px;
+ 
 
 }
 @media (min-width: 992px) {
