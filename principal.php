@@ -63,6 +63,11 @@
                                     
                                     <a class="nav-link" href="agregarproducto.php">productos</a>
                                     <a class="nav-link" href="tblconBono.php">bono</a>
+                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
+                                    <a class="nav-link" href="tblparroquias.php">parroquia</a>
+                                    <a class="nav-link" href="tblcomunidad.php">comunidad</a>
+                                    <a class="nav-link" href="tblDenominacion.php">denominacio</a>
+                                    <a class="nav-link" href="tblctgproducto.php">categorias</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
