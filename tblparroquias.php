@@ -1,11 +1,17 @@
 
+
+
+
+
+
 <?php
 
-include 'datos/DtUsuario.php';
-include 'entidades/Usuarios.php';
+include 'datos/DtParroquia.php';
+include 'entidades/Parroquia.php';
 
-$dt = new DtUsuario();
-$user= new Usuario();
+$dt = new DtParroquia();
+$par= new Parroquia();
+
 
 
 
@@ -165,29 +171,16 @@ if(isset($varMsj))
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
 
                                 <label> 
-                                <select>    
-                                <?php
-        
-                                foreach ($dt->listUsuario() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
-                                    
-                                   
-
-                                    <?php
-                                endforeach;
-                                ?>
-                                 </select>
+                              
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Nombre</th>
-                                            <th>apellido</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Opciones</th>
+                                            <th>Parroquia</th>
+                                            <th>direccion</th>
+                                            <th>telefono</th>
+                                            <th>parroco</th>
+                                            <th>logo</th>
+                                            <th>sitio web</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </thead>
@@ -195,23 +188,24 @@ if(isset($varMsj))
 
                                         <?php
 
-                                        foreach ($dt->listUsuario() as $r):
+                                        foreach ($dt->listParroquia() as $r):
                                         ?>
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("id_usuario"); ?>
+                                        <?php echo $r->__GET("idParroquia"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("usuario"); ?>
+                                        <?php echo $r->__GET("nombre"); ?>
                                         
                                             
                                         </td>
-                                            <td>   <?php echo $r->__GET("nombres"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("apellidos"); ?></td>
-                                            <td>   <?php echo $r->__GET("email"); ?></td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>   <?php echo $r->__GET("direccion"); ?>   </td>
+                                            <td>   <?php echo $r->__GET("telefono"); ?></td>
+                                            <td>   <?php echo $r->__GET("parroco"); ?></td>
+                                            <td>   <?php echo $r->__GET("logo"); ?></td>
+                                            <td>   <?php echo $r->__GET("sitio_web"); ?></td>
+                                            
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">

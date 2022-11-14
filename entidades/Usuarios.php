@@ -18,15 +18,6 @@ public function __SET($k, $v){return $this->$k = $v;}
 
 }   
 
-
-
-
-
-
-
-
-
-
 ?>
 
 

@@ -4,32 +4,32 @@
 
 include_once('conexion.php');
 
-class DtUsuario extends conexion
+class DtParroquia extends conexion
 {
 
     private $myCon;
 
-    public function listUsuario()
+    public function listParroquia()
     {
             try{
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_usuario";
+                    $querysql= "SELECT * FROM tbl_parroquia";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Usuario();
-                            $usu->__SET('id_usuario', $r->id_usuario);
-                            $usu->__SET('usuario', $r->usuario);
-                            $usu->__SET('nombres', $r->nombres);
-                            $usu->__SET('apellidos', $r->apellidos);
-                            $usu->__SET('email', $r->email);
-                            $usu->__SET('pwd', $r->pwd);
-                            
+                            $usu= new Parroquia();
+                            $usu->__SET('idParroquia', $r->idParroquia);
+                            $usu->__SET('nombre', $r->nombre);
+                            $usu->__SET('direccion', $r->direccion);
+                            $usu->__SET('telefono', $r->telefono);
+                            $usu->__SET('parroco', $r->parroco);
+                            $usu->__SET('logo', $r->logo);
+                            $usu->__SET('sitio_web', $r->sitio_web);
 
                             $result[]=$usu;
                     }
