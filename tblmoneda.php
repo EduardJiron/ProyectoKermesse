@@ -32,7 +32,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión monedas</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -150,15 +150,15 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                        <h1 class="mt-4">Gestionar Datos de moneda</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
+                            <li class="breadcrumb-item active">Gestión de monedas</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
+                                En esta pantalla se pueden visualizar y gestionar los datos de las pagosa de la monedas activos/inactivos. 
+                                Para gestinar por favor de clic en el botón: 
                                 <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
@@ -168,7 +168,7 @@ if(isset($varMsj))
                                 Usuarios Activos
                             </div>
                             <div class="card-body">
-                                <table id="tbl_usuarios" class="table table-bordered table-striped">
+                                <table id="tbl_moneda" class="table table-bordered table-striped">
 
                                 <label> 
                               
@@ -278,7 +278,7 @@ $(document).ready(function ()
 /////////// DATATABLE ///////////
 $(document).ready( function (){
     
-    $("#tbl_usuarios").DataTable({
+    $("#tbl_moneda").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["excel", "pdf", "print"],
       "language": {
@@ -371,7 +371,7 @@ $(document).ready( function (){
     },
     "infoEmpty": "No hay datos para mostrar"
         }
-    }).buttons().container().appendTo('#tbl_usuarios_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_moneda_wrapper .col-md-6:eq(0)');
 
 });
 
