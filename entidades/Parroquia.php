@@ -1,6 +1,6 @@
 <?php
 class Parroquia{
-private $idParroquia;
+private $idParroquia; 
 private $nombre;
 private $direccion;
 private $telefono;

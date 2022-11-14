@@ -1,4 +1,9 @@
 
+
+
+
+
+
 <?php
 
 include 'datos/DtUsuario.php';
@@ -30,8 +35,8 @@ if(isset($varMsj))
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
-        <link href="css/styles7.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styles6.css">
+        <link href="css/styles6.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles7.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
@@ -45,7 +50,7 @@ if(isset($varMsj))
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.php">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -146,14 +151,14 @@ if(isset($varMsj))
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Index</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item active">Gestión de Usuarios</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="agregarUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -165,29 +170,15 @@ if(isset($varMsj))
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
 
                                 <label> 
-                                <select>    
-                                <?php
-        
-                                foreach ($dt->listUsuario() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
-                                    
-                                   
-
-                                    <?php
-                                endforeach;
-                                ?>
-                                 </select>
+                            
                                     <thead>
                                         <tr>
                                             <th>id</th>
+                                            <th>Usuario</th>
                                             <th>Nombre</th>
                                             <th>apellido</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Opciones</th>
+                                            <th>email</th>
+                                           
                                             <th>Opciones</th>
                                         </tr>
                                     </thead>
@@ -210,9 +201,7 @@ if(isset($varMsj))
                                             <td>   <?php echo $r->__GET("nombres"); ?>   </td>
                                             <td>   <?php echo $r->__GET("apellidos"); ?></td>
                                             <td>   <?php echo $r->__GET("email"); ?></td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-
+                                      
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
@@ -231,18 +220,7 @@ endforeach;
 ?>
                                         </tr>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Opciones</th>
-                                            <th>Opciones</th>
-                                        </tr>
-                                    </tfoot>
+                                   
                                 </table>
                             </div>
                         </div>
