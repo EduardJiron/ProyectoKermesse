@@ -1,11 +1,10 @@
-
 <?php
 
-include 'datos/DtUsuario.php';
-include 'entidades/Usuarios.php';
+include 'datos/DtComunidad.php';
+include 'entidades/Comunidad.php';
 
-$dt = new DtUsuario();
-$user= new Usuario();
+$dt = new DtComunidad();
+$comunidad = new Comunidad();
 
 
 
@@ -26,10 +25,9 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión de Comunidad</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
-       
         <link href="css/styles7.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/styles6.css">
         <!-- Font Awesome -->
@@ -69,7 +67,7 @@ if(isset($varMsj))
             </ul>
         </nav>
         <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-        <div class="mastheade">
+        <div class="masthead">
             
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -144,83 +142,70 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                        <h1 class="mt-4">Gestionar Datos de una comunidad</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
+                            <li class="breadcrumb-item active">Gestión de Comunidad</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                En esta pantalla se pueden visualizar y gestionar los datos de los comunidades activas/inactivas. 
+                                Para crear un nueva comunidad por favor de clic en el botón: 
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva comunidad</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                                Comunidades Activas
                             </div>
                             <div class="card-body">
-                                <table id="tbl_usuarios" class="table table-bordered table-striped">
-
-                                <label> 
-                                <select>    
-                                <?php
-        
-                                foreach ($dt->listUsuario() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
-                                    
-                                   
-
-                                    <?php
-                                endforeach;
-                                ?>
-                                 </select>
+                                <table id="tbl_comunidad" class="table table-bordered table-striped">
                                     <thead>
-                                        <tr>
-                                            <th>id</th>
+
+                                    <!-- Campos que van a aparecer en la pagina en linea-->
+
+
+                                        <tr>                                        
+                                            <th>ID</th>
                                             <th>Nombre</th>
-                                            <th>apellido</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Opciones</th>
-                                            <th>Opciones</th>
+                                            <th>Responsable</th>
+                                            <th>Descuento contribucion</th>
+                                            <th>Estado </th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <?php
 
-                                        foreach ($dt->listUsuario() as $r):
+                                        foreach ($dt->listComunidad() as $r):
                                         ?>
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("id_usuario"); ?>
+                                        <?php echo $r->__GET("id_comunidad"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("usuario"); ?>
+                                        <?php echo $r->__GET("nombre"); ?>
                                         
                                             
                                         </td>
-                                            <td>   <?php echo $r->__GET("nombres"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("apellidos"); ?></td>
-                                            <td>   <?php echo $r->__GET("email"); ?></td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                          
+                                            <td>   <?php echo $r->__GET("responsable"); ?></td>
+                                            <td>   <?php echo $r->__GET("desc_contribucion"); ?></td>
+                                            <td>   <?php echo $r->__GET("estado"); ?></td>
+
+                                           
 
                                             <td>
-                                                <a href="#" target="_blank" title="Visualizar los datos de un usuario">
+                                                <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="#" target="_blank" title="Modificar los datos de la comunidad">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
+                                                <a href="#" target="_blank" title="Dar de baja a una comunidad">
                                                     <i class="fa-solid fa-user-minus"></i> 
                                                 </a>
                                             </td>
@@ -231,18 +216,7 @@ endforeach;
 ?>
                                         </tr>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Opciones</th>
-                                            <th>Opciones</th>
-                                        </tr>
-                                    </tfoot>
+
                                 </table>
                             </div>
                         </div>
@@ -300,7 +274,7 @@ $(document).ready(function ()
 /////////// DATATABLE ///////////
 $(document).ready( function (){
     
-    $("#tbl_usuarios").DataTable({
+    $("#tbl_comunidad").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["excel", "pdf", "print"],
       "language": {
@@ -393,7 +367,7 @@ $(document).ready( function (){
     },
     "infoEmpty": "No hay datos para mostrar"
         }
-    }).buttons().container().appendTo('#tbl_usuarios_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_comunidad_wrapper .col-md-6:eq(0)');
 
 });
 

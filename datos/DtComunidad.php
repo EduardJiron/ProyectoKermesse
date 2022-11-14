@@ -1,32 +1,34 @@
+
 <?php
 
 
 include_once('conexion.php');
 
-class DtMoneda extends conexion
+class DtComunidad extends conexion
 {
 
     private $myCon;
 
-    public function listMoneda()
+    public function listComunidad()
     {
             try{
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_moneda";
+                    $querysql= "SELECT * FROM tbl_comunidad";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new moneda();
-                            $usu->__SET('id_moneda', $r->id_moneda);
+                            $usu= new Comunidad();
+                            $usu->__SET('id_comunidad', $r->id_comunidad);
                             $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('simbolo', $r->simbolo);
-                            $usu->__SET('estado', $r->estado);
-                           
+                            $usu->__SET('responsable', $r->responsable);
+                            $usu->__SET('desc_contribucion', $r->desc_contribucion);
+                            $usu->__SET('estado', $r->estado);                            
+
                             $result[]=$usu;
                     }
                     

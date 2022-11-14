@@ -1,12 +1,15 @@
 <?php
-class moneda{
-private $id_moneda;
+
+class Comunidad{
+
+private $id_comunidad;
 private $nombre;
-private $simbolo;
-private $estado=1;
+private $responsable;
+private $desc_contribucion;
+private $estado = 1;
 
 public function __GET($k){return $this->$k;}
 public function __SET($k, $v){return $this->$k = $v;}
-}
 
+}   
 ?>
