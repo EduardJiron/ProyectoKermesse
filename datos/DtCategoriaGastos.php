@@ -22,14 +22,14 @@ class DtCategoriaGastos extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Parroquia();
-                            $usu->__SET('id_categoria_gastos', $r->id_categoria_gastos);
-                            $usu->__SET('nombre_categoria', $r->nombre_categoria);
-                            $usu->__SET('descripcion', $r->descripcion);
-                            $usu->__SET('estado', $r->estado);
+                            $ctgg= new Parroquia();
+                            $ctgg->__SET('id_categoria_gastos', $r->id_categoria_gastos);
+                            $ctgg->__SET('nombre_categoria', $r->nombre_categoria);
+                            $ctgg->__SET('descripcion', $r->descripcion);
+                            $ctgg->__SET('estado', $r->estado);
 
 
-                            $result[]=$usu;
+                            $result[]=$ctgg;
                     }
                     
                     $this->myCon= parent ::desconectar();

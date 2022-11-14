@@ -21,13 +21,13 @@ class DtDenominacion extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Denominacion();
-                            $usu->__SET('id_Denominacion', $r->id_Denominacion);
-                            $usu->__SET('valor', $r->valor);   
-                            $usu->__SET('valor_letras', $r->valor_letras);   
-                            $usu->__SET('estado', $r->estado);                            
+                            $den= new Denominacion();
+                            $den->__SET('id_Denominacion', $r->id_Denominacion);
+                            $den->__SET('valor', $r->valor);   
+                            $den->__SET('valor_letras', $r->valor_letras);   
+                            $den->__SET('estado', $r->estado);                            
 
-                            $result[]=$usu;
+                            $result[]=$den;
                     }
                     
                     $this->myCon= parent ::desconectar();

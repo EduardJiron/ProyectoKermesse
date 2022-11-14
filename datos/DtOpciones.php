@@ -22,12 +22,12 @@ class DtOpciones extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Parroquia();
-                            $usu->__SET('id_opciones', $r->id_opciones);
-                            $usu->__SET('opcion_descripcion', $r->opcion_descripcion);
-                            $usu->__SET('estado', $r->estado);
+                            $opc= new Parroquia();
+                            $opc->__SET('id_opciones', $r->id_opciones);
+                            $opc->__SET('opcion_descripcion', $r->opcion_descripcion);
+                            $opc->__SET('estado', $r->estado);
 
-                            $result[]=$usu;
+                            $result[]=$opc;
                     }
                     
                     $this->myCon= parent ::desconectar();

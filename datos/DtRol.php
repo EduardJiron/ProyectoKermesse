@@ -21,12 +21,12 @@ class DtRol extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Rol();
-                            $usu->__SET('id_rol', $r->id_rol);
-                            $usu->__SET('rol_descripcion', $r->rol_descripcion);                            
-                            $usu->__SET('estado', $r->estado);                            
+                            $rol= new Rol();
+                            $rol->__SET('id_rol', $r->id_rol);
+                            $rol->__SET('rol_descripcion', $r->rol_descripcion);                            
+                            $rol->__SET('estado', $r->estado);                            
 
-                            $result[]=$usu;
+                            $result[]=$rol;
                     }
                     
                     $this->myCon= parent ::desconectar();

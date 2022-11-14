@@ -22,16 +22,16 @@ class DtParroquia extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Parroquia();
-                            $usu->__SET('idParroquia', $r->idParroquia);
-                            $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('direccion', $r->direccion);
-                            $usu->__SET('telefono', $r->telefono);
-                            $usu->__SET('parroco', $r->parroco);
-                            $usu->__SET('logo', $r->logo);
-                            $usu->__SET('sitio_web', $r->sitio_web);
+                            $par= new Parroquia();
+                            $par->__SET('idParroquia', $r->idParroquia);
+                            $par->__SET('nombre', $r->nombre);
+                            $par->__SET('direccion', $r->direccion);
+                            $par->__SET('telefono', $r->telefono);
+                            $par->__SET('parroco', $r->parroco);
+                            $par->__SET('logo', $r->logo);
+                            $par->__SET('sitio_web', $r->sitio_web);
 
-                            $result[]=$usu;
+                            $result[]=$par;
                     }
                     
                     $this->myCon= parent ::desconectar();

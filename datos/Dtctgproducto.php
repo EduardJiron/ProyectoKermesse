@@ -21,13 +21,13 @@ class Dtctgproducto extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Ctgproducto();
-                            $usu->__SET('id_categoria_producto', $r->id_categoria_producto);
-                            $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('descripcion', $r->descripcion);
-                            $usu->__SET('estado', $r->estado);
+                            $ctg= new Ctgproducto();
+                            $ctg->__SET('id_categoria_producto', $r->id_categoria_producto);
+                            $ctg->__SET('nombre', $r->nombre);
+                            $ctg->__SET('descripcion', $r->descripcion);
+                            $ctg->__SET('estado', $r->estado);
                            
-                            $result[]=$usu;
+                            $result[]=$ctg;
                     }
                     
                     $this->myCon= parent ::desconectar();

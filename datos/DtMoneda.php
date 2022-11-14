@@ -21,13 +21,13 @@ class DtMoneda extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new moneda();
-                            $usu->__SET('id_moneda', $r->id_moneda);
-                            $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('simbolo', $r->simbolo);
-                            $usu->__SET('estado', $r->estado);
+                            $mon= new moneda();
+                            $mon->__SET('id_moneda', $r->id_moneda);
+                            $mon->__SET('nombre', $r->nombre);
+                            $mon->__SET('simbolo', $r->simbolo);
+                            $mon->__SET('estado', $r->estado);
                            
-                            $result[]=$usu;
+                            $result[]=$mon;
                     }
                     
                     $this->myCon= parent ::desconectar();

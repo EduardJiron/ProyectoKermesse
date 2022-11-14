@@ -22,14 +22,14 @@ class DtComunidad extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new Comunidad();
-                            $usu->__SET('id_comunidad', $r->id_comunidad);
-                            $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('responsable', $r->responsable);
-                            $usu->__SET('desc_contribucion', $r->desc_contribucion);
-                            $usu->__SET('estado', $r->estado);                            
+                            $com= new Comunidad();
+                            $com->__SET('id_comunidad', $r->id_comunidad);
+                            $com->__SET('nombre', $r->nombre);
+                            $com->__SET('responsable', $r->responsable);
+                            $com->__SET('desc_contribucion', $r->desc_contribucion);
+                            $com->__SET('estado', $r->estado);                            
 
-                            $result[]=$usu;
+                            $result[]=$com;
                     }
                     
                     $this->myCon= parent ::desconectar();

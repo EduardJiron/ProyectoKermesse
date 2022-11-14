@@ -16,19 +16,10 @@ class Conexion
         $serverName = 'localhost';
         $dbName = 'webk';
         $userName = 'root';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $pwd = 'Temporal2022+';
-=======
-        $pwd = 'Usuario123.';
-
-
->>>>>>> 90154e26afb6214e828d7de21b45d0f0ab1dfe19
-=======
-
 
         $pwd = 'Temporal2022+';
->>>>>>> 8bc2b9276c41689473c7d90360d6f331a69f94fa
+
+
 
 
        

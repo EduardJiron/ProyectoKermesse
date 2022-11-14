@@ -22,14 +22,14 @@ class DtConBono extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $usu= new conBono();
-                            $usu->__SET('id_bono', $r->id_bono);
-                            $usu->__SET('nombre', $r->nombre);
-                            $usu->__SET('valor', $r->valor);
-                            $usu->__SET('estado', $r->estado);
+                            $bon= new conBono();
+                            $bon->__SET('id_bono', $r->id_bono);
+                            $bon->__SET('nombre', $r->nombre);
+                            $bon->__SET('valor', $r->valor);
+                            $bon->__SET('estado', $r->estado);
                     
 
-                            $result[]=$usu;
+                            $result[]=$bon;
                     }
                     
                     $this->myCon= parent ::desconectar();
