@@ -6,11 +6,12 @@
 
 <?php
 
-include 'datos/DtUsuario.php';
-include 'entidades/Usuarios.php';
+include 'datos/Dtctgproducto.php';
+include 'entidades/ctgproducto.php';
 
-$dt = new DtUsuario();
-$user= new Usuario();
+$dt = new Dtctgproducto();
+$mon= new ctgproducto();
+
 
 
 
@@ -50,7 +51,7 @@ if(isset($varMsj))
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -151,14 +152,14 @@ if(isset($varMsj))
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Index</a></li>
                             <li class="breadcrumb-item active">Gestión de Usuarios</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="agregarUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -170,38 +171,38 @@ if(isset($varMsj))
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
 
                                 <label> 
-                            
+                              
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Usuario</th>
-                                            <th>Nombre</th>
-                                            <th>apellido</th>
-                                            <th>email</th>
+                                            <th>nombre</th>
+                                            <th>descripcion</th>
+                                            <th>opciones</th>
+                                            
                                            
-                                            <th>Opciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <?php
 
-                                        foreach ($dt->listUsuario() as $r):
+                                        foreach ($dt->listctgproducto() as $r):
                                         ?>
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("id_usuario"); ?>
+                                        <?php echo $r->__GET("id_categoria_producto"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("usuario"); ?>
+                                        <?php echo $r->__GET("nombre"); ?>
                                         
                                             
                                         </td>
-                                            <td>   <?php echo $r->__GET("nombres"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("apellidos"); ?></td>
-                                            <td>   <?php echo $r->__GET("email"); ?></td>
-                                      
+                                            <td>   <?php echo $r->__GET("descripcion"); ?>   </td>
+                                           
+                                            
+                                            
+
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
@@ -220,7 +221,7 @@ endforeach;
 ?>
                                         </tr>
                                     </tbody>
-                                   
+                                  
                                 </table>
                             </div>
                         </div>

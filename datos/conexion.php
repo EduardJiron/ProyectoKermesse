@@ -19,6 +19,7 @@ class Conexion
         $userName = 'root';
         $pwd = 'Temporal2022+';
 
+
 		try
 		{
             
