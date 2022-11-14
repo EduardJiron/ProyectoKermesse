@@ -28,9 +28,8 @@ if(isset($varMsj))
         <title>Gestión de Comunidad</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/styles6.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styles7.css">
+        <link href="css/styles7.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles6.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
