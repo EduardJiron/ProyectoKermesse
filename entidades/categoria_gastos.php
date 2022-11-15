@@ -1,4 +1,6 @@
 <?php
+
+
 class CategoriaGastos{
 private $id_categoria_gastos;
 private $nombre_categoria;

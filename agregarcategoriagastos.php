@@ -1,3 +1,32 @@
+
+
+
+<?php
+include 'datos/Dtproducto.php';
+include 'entidades/producto.php';
+include 'datos/DtComunidad.php';
+include 'entidades/Comunidad.php';
+include 'datos/Dtctgproducto.php';
+include 'entidades/ctgproducto.php';
+
+$dtCP = new Dtctgproducto();
+$mon= new ctgproducto();
+
+
+$dtC = new DtComunidad();
+$comunidad = new Comunidad();
+
+
+$dt = new DtProducto();
+$pro= new Producto();
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +47,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="principal.php">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -46,44 +75,23 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
-                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Usuarios y roles
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    
-    
-                                   <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="tblusuario.php">Usuarios</a>
-                                            <a class="nav-link" href="tblrol.php">rol</a>
-                                            <a class="nav-link" href="tblopciones.php">opciones</a>
-                                            <a class="nav-link" href="tblopciones.php">asignar rol</a>
-                                        </nav>
-                                    </div>
-                            <div class="sb-sidenav-menu-heading">Gestion usuario</div>
+                            <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div class="sb-sidenav-menu-heading">gestionar</div>
+                            <div class="sb-sidenav-menu-heading">Usuario</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Gestionar 
+                                Gestionar usuario
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="tblusuario.php">Usuarios</a>
+                                    <a class="nav-link" href="layout-static.html">Crear Usuario</a>
                                     
-                                    <a class="nav-link" href="agregarproducto.php">productos</a>
-                                    <a class="nav-link" href="tblconBono.php">bono</a>
-                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tblparroquias.php">parroquia</a>
-                                    <a class="nav-link" href="tblcomunidad.php">comunidad</a>
-                                    <a class="nav-link" href="tblDenominacion.php">denominacio</a>
-                                    <a class="nav-link" href="tblctgproducto.php">categorias</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Editar Usuario</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Borrar Usuario</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -100,11 +108,11 @@
                                     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
+                                        <!--<nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Login</a>
                                             <a class="nav-link" href="register.html">Register</a>
                                             <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
+                                        </nav> -->
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         Error
@@ -137,49 +145,46 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-               <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/loop.mp4" type="video/mp4" /></video>
+               <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
                 <div class="masthead">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar usuario</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar categoria de gasto</h3></div>
                                     <div class="card-body">
                                         <form>
+
                                             <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre de usuario</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Contraseña</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
+
+                                            <br>
+
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                     </div>
                                                 </div>
+
+                                                <br>
+                                                <br>
+                                            
+
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
                                                         <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Apellido</label>
+                                                        <label for="inputLastName">Descripción</label>
                                                     </div>
                                                 </div>
-                                            
-                                            </div>
-                                        </div>
+
+                                                <br>
+                                                <br>
+
+                                              
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Correo</label>
+                                               
+                                              
                                             </div>
                                             <div class="row mb-3">
                                                 
@@ -191,7 +196,7 @@
                                                 </div>
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Crear Usuaro</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Agregar categoria</a></div>
                                             </div>
                                         </form>
                                     </div>

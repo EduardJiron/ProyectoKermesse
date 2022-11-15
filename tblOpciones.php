@@ -174,9 +174,10 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>ID Opciones</th>
+                                            <th>ID </th>
                                             <th>Descripción</th>
-                                            <th>Estado</th>
+                                            <th>Opciones</th>
+                                         
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -188,16 +189,12 @@ if(isset($varMsj))
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("idopciones"); ?>
+                                        <?php echo $r->__GET("id_opciones"); ?>
                                             </td>
-                                            <td>
-                                        <?php echo $r->__GET("opciones"); ?>
                                         
-                                            
-                                        </td>
-                                            <td>   <?php echo $r->__GET("id_opciones"); ?>   </td>
+                                           
                                             <td>   <?php echo $r->__GET("opcion_descripcion"); ?></td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>
+                                           
                                             
 
                                             <td>

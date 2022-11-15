@@ -188,17 +188,16 @@ if(isset($varMsj))
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("idCategoriaGastos"); ?>
+                                        <?php echo $r->__GET("id_categoria_gastos"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("categoriaGastos"); ?>
+                                        
                                         
                                             
                                         </td>
-                                            <td>   <?php echo $r->__GET("id_categoria_gastos"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("nombre_categoria"); ?></td>
-                                            <td>   <?php echo $r->__GET("descripcion"); ?></td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>
+                                            <td><?php echo $r->__GET("nombre_categoria"); ?></td>
+                                            <td><?php echo $r->__GET("descripcion"); ?></td>
+                                            <td><?php echo $r->__GET("estado"); ?></td>
                                             
 
                                             <td>

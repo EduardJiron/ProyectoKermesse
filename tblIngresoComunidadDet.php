@@ -163,8 +163,7 @@ if(isset($varMsj))
                                 <table id="tbl_denominacion" class="table table-bordered table-striped">
                                     <thead>
 
-                                    <!-- Campos que van a aparecer en la pagina en linea-->
-
+                                    
 
                                         <tr>                                        
                                             <th>ID</th>                                            

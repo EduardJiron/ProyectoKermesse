@@ -8,9 +8,15 @@
 
 include 'datos/DtListaPrecioDet.php';
 include 'entidades/lista_precio_det.php';
+include 'datos/Dtproducto.php';
+include 'entidades/producto.php';
+
+$dtp = new DtProducto ();
+$par= new  Producto();
+
 
 $dt = new DtListaPrecioDet();
-$par= new lista_precio_det();
+$pa= new lista_precio_det();
 
 
 
@@ -150,16 +156,16 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                        <h1 class="mt-4">Getionar lista de precio/h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
+                            <li class="breadcrumb-item"><a href="index.php">home</a></li>
+                            <li class="breadcrumb-item active">Gestion de precios</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                En esta pantalla se pueden visualizar y gestionar los precios de los productos activos/inactivos. 
+                                Para ingresar un precio favor de clic en el botón: 
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Agregar </a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -174,10 +180,12 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>ID Listas de Precios Det</th>
-                                            <th>ID Listas de Precios</th>
-                                            <th>ID Producto</th>
+                                            <th>ID </th>
+                                          
+                                            <th>producto</th>
                                             <th>Precio Venta</th>
+                                            
+                                            <th>Opciones</th>
 
                                         </tr>
                                     </thead>
@@ -186,19 +194,17 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listListaPrecioDet() as $r):
+                                            foreach ($dtp->listProducto() as $s):
                                         ?>
 
                                         <tr>
                                             <td>
                                         <?php echo $r->__GET("id_listaprecio_det"); ?>
                                             </td>
-                                            <td>
-                                        <?php echo $r->__GET("id_lista_precio"); ?>
-                                        
-                                            
-                                        </td>
-                                            <td>   <?php echo $r->__GET("id_producto"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("precio_venta"); ?></td>                                    
+                                     
+                                            <td>   <?php echo $s->__GET("nombre"); ?></td>   
+                                            <td>   <?php echo $r->__GET("precio_venta"); ?></td>       
+                                                                       
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
@@ -213,7 +219,7 @@ if(isset($varMsj))
                                             </td>
                                             
                                             <?php
-
+endforeach;
 endforeach;
 ?>
                                         </tr>

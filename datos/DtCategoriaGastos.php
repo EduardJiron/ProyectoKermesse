@@ -22,7 +22,7 @@ class DtCategoriaGastos extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $ctgg= new Parroquia();
+                            $ctgg= new CategoriaGastos();
                             $ctgg->__SET('id_categoria_gastos', $r->id_categoria_gastos);
                             $ctgg->__SET('nombre_categoria', $r->nombre_categoria);
                             $ctgg->__SET('descripcion', $r->descripcion);
