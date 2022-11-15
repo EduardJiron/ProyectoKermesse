@@ -125,12 +125,16 @@ if(isset($varMsj))
                                     <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
                                     <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
                                     <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tblmoneda.php">gasto</a>
-                                    <a class="nav-link" href="tblCategoriaGastos.php">Denominacion</a>
-                                    <a class="nav-link" href="tblconBono.php">categoria de gasto</a>
+                                    <a class="nav-link" href="tblgastos.php">gasto</a>
+
+                                    <a class="nav-link" href="tblgastosdet.php">gasto det</a>
+                                      <a class="nav-link" href="tblconBono.php">bono</a>
+                                    <a class="nav-link" href="tblDenominacion.php">Denominacion</a>
+                                    <a class="nav-link" href="tblCategoriaGastos.php">categoria de gasto</a>
+                                  
                                     <a class="nav-link" href="tbltasaCambio.php">tasa de cambio</a>
-                                    <a class="nav-link" href="tbltasaCambio.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tbltasaCambio.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
