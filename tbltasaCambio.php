@@ -151,7 +151,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las tasasa de cambios. 
                                 Para crear un nuevo tasa de cambio por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo rol</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva tasa de cambio</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -170,7 +170,7 @@ if(isset($varMsj))
                                             <th>ID</th>
                                             <th>Mes</th>                                            
                                             <th>Año</th>
-                                            <th>estado</th>
+                                            <th>opciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -191,8 +191,7 @@ if(isset($varMsj))
                                         <?php echo $r->__GET("anio"); ?>   
                                         </td>                                        
                                            
-                                            <td>  
-                                                 <?php echo $r->__GET("estado"); ?></td>
+                                           
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los roles ">

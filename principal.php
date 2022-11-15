@@ -96,7 +96,12 @@
                                     <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
                                     <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
                                     <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tbldenominacion.php">Denominacion</a>
+                                    <a class="nav-link" href="tblmoneda.php">gasto</a>
+                                    <a class="nav-link" href="tblCategoriaGastos.php">Denominacion</a>
+                                    <a class="nav-link" href="tblconBono.php">categoria de gasto</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">tasa de cambio</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">Arqueo de caja</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">Arqueo de caja det</a>
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
@@ -120,11 +125,11 @@
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblcomunidad.php">Comunidades</a>
                                             <a class="nav-link" href="tblparroquia.php">parroquia</a>
-                                            <a class="nav-link" href="">500 Page</a>
+                                            <a class="nav-link" href="">kermesse</a>
                                         </nav>
                             </div>
                             
-                 
+</div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
