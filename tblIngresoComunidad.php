@@ -2,6 +2,17 @@
 
 include 'datos/DtIngresoComunidad.php';
 include 'entidades/IngresoComunidad.php';
+include 'datos/Dtproducto.php';
+include 'entidades/producto.php';
+include 'datos/DtComunidad.php';
+include 'entidades/Comunidad.php';
+
+$dtc = new DtComunidad();
+$comunidad = new Comunidad();
+
+$dtp = new DtProducto ();
+$par= new  Producto();
+
 
 $dt = new DtIngresoComunidad();
 $ingresocomunidad = new IngresoComunidad();
@@ -168,14 +179,14 @@ if(isset($varMsj))
 
                                         <tr>                                        
                                             <th>ID</th>
-                                            <th>Cantidad de productos</th>
-                                            <th>Total de bonos</th>                                            
-                                            <th>Estado </th>
-                                            <th>Usuario creacion </th>
-                                            <th>Fecha de creacion </th>
-                                            <th>Fecha de moficacion </th>
-                                            <th>Usuario eliminacion </th>
-                                            <th>Fecha de eliminacion </th>
+                                            <th>comunidad</th>  
+                                            <th>Producto</th>     
+                                            <th>cantidad</th>
+                                            <th>Total de bonos</th>  
+                                            <th>Opciones</th>
+                                                                                      
+                                           
+                                           
                                             
                                         </tr>
                                     </thead>
@@ -184,26 +195,34 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listIngresoComunidad() as $r):
+                                            foreach ($dtp->listProducto() as $s):
+                                              
+                                                
+                                                
+
+
+                                               
                                         ?>
+                                         <?php
+                                        foreach ($dtc->listComunidad() as $gg):
+?>
 
                                         <tr>
                                             <td>
                                         <?php echo $r->__GET("id_ingreso_comunidad"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("cant_productos"); ?>
-                                        
+                                            <?php echo $gg->__GET("nombre"); ?>
+
                                             
-                                        </td>                                         
+                                        </td>        
+                                        <td> <?php echo $s->__GET("nombre"); ?>  </td> 
+                                        <td> <?php echo $r->__GET("cant_productos"); ?>    </td>        
+                                        <td> <?php echo $r->__GET("total_bonos"); ?>    </td>             
+                                                     
+                                            
+                                          
                                            
-                                            <td>   <?php echo $r->__GET("total_bonos"); ?></td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>
-                                            <td>   <?php echo $r->__GET("usuario_creacion"); ?></td>
-                                            <td>   <?php echo $r->__GET("fecha_creacion"); ?></td>
-                                            <td>   <?php echo $r->__GET("usuario_modificacion"); ?></td>
-                                            <td>   <?php echo $r->__GET("fecha_modificacion"); ?></td>
-                                            <td>   <?php echo $r->__GET("usuario_eliminacion"); ?></td>
-                                            <td>   <?php echo $r->__GET("fecha_eliminacion"); ?></td>
 
 
                                            
@@ -221,10 +240,16 @@ if(isset($varMsj))
                                             </td>
                                             
                                             <?php
-
 endforeach;
 ?>
-                                        </tr>
+
+                                            <?php
+
+endforeach;
+endforeach;
+
+?>
+                                   
                                     </tbody>
 
                                 </table>

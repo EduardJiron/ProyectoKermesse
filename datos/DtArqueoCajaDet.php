@@ -15,31 +15,26 @@ class DtArqueoCajaDet extends conexion
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_idarqueocaja";
+                    $querysql= "SELECT * FROM tbl_arqueocaja_det";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $ctgg= new Parroquia();
-                            $ctgg->__SET('id_ArqueoCaja', $r->id_ArqueoCaja);
-                            $ctgg->__SET('idKermesse', $r->idKermesse);
-                            $ctgg->__SET('fechaArqueo', $r->fechaArqueo);
-                            $ctgg->__SET('granTotal', $r->granTotal);
-                            $ctgg->__SET('usuario_creacion', $r->usuario_creacion);
-                            $ctgg->__SET('fecha_creacion', $r->fecha_creacion);
-                            $ctgg->__SET('usuario_modificacion', $r->usuario_modificacion);
-                            $ctgg->__SET('fecha_modificacion', $r->fecha_modificacion);
-                            $ctgg->__SET('usuario_eliminacion', $r->usuario_eliminacion);
-                            $ctgg->__SET('fecha_eliminacion', $r->fecha_eliminacion);
-                            $ctgg->__SET('estado', $r->estado);
+                        $arq= new ArqueoCajaDet(); 
+                        $arq ->_SET('id_Arqueo_Det', $r->id_Arqueo_Det); 
+                        $arq ->_SET('id_ArqueoCaja', $r->id_ArqueoCaja);
+                        $arq ->_SET('id_Moneda', $r->id_Moneda);    
+                        $arq ->_SET('id_Denominacion', $r->id_Denominacion);
+                        $arq ->_SET('cantidad', $r->cantidad);
+                        $arq ->_SET('subtotal', $r->subtotal);
 
 
 
 
 
-                            $result[]=$ctgg;
+                            $result[]=$arq;
                     }
                     
                     $this->myCon= parent ::desconectar();

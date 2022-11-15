@@ -1,22 +1,11 @@
 
-
-
-
-
-
 <?php
 
-include 'datos/DtListaPrecioDet.php';
-include 'entidades/lista_precio_det.php';
-include 'datos/Dtproducto.php';
-include 'entidades/producto.php';
+include 'datos/Dtgasto.php';
+include 'entidades/gastos.php';
 
-$dtp = new DtProducto ();
-$par= new  Producto();
-
-
-$dt = new DtListaPrecioDet();
-$pa= new lista_precio_det();
+$dt = new Dtgasto();
+$par= new gastos();
 
 
 
@@ -38,7 +27,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión de gastos</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -156,22 +145,22 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                        <h1 class="mt-4">Gestionar Datos de Gastos</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
+                            <li class="breadcrumb-item active">Gestión de gastos</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
+                                En esta pantalla se pueden visualizar y gestionar los gastos de las kermesse. 
+                                Para añador gastos de clic en el botón: 
                                 <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                                Gastos.
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
@@ -180,12 +169,17 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>ID </th>
-                                          
+                                            <th>ID</th>
+                                            <th>Fecha de los gastos</th>
+                                            <th>Concepto</th>
+                                            <th>Monto </th>
+                                            <th>Creacion de usuario</th>
+                                            <th>Fecha de creacion</th>
+                                            <th>Modificación de usuario</th>
+                                            <th>Fecha de moficación</th>
+                                            <th>Eliminación de Usuario</th>
+                                            <th>Fecha de elliminción</th>
                                             
-                                            <th>Precio Venta</th>
-                                            <th>producto</th>
-                                            <th>Opciones</th>
 
                                         </tr>
                                     </thead>
@@ -193,18 +187,28 @@ if(isset($varMsj))
 
                                         <?php
 
-                                        foreach ($dt->listListaPrecioDet() as $r):
-                                            foreach ($dtp->listProducto() as $s):
+                                        foreach ($dt->listGasto() as $r):
                                         ?>
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("id_listaprecio_det"); ?>
+                                        <?php echo $r->__GET("id_registro_gastos"); ?>
                                             </td>
-                                     
-                                            <td>   <?php echo $s->__GET("nombre"); ?></td>   
-                                            <td>   <?php echo $r->__GET("precio_venta"); ?></td>       
-                                                                       
+                                            <td>
+                                        <?php echo $r->__GET("fechaGasto"); ?>
+                                        
+                                            
+                                        </td>
+                                            <td>   <?php echo $r->__GET("concepto"); ?>   </td>
+                                            <td>   <?php echo $r->__GET("monto"); ?></td>
+                                            <td>   <?php echo $r->__GET("usuario_creacion"); ?></td>
+                                            <td>   <?php echo $r->__GET("fecha_creacion"); ?></td>
+                                            <td>   <?php echo $r->__GET("usuario_modificacion"); ?></td>   
+                                            <td>   <?php echo $r->__GET("fecha_modificacion"); ?></td>
+                                            <td>   <?php echo $r->__GET("usuario_eliminacion"); ?></td>   
+                                            <td>   <?php echo $r->__GET("fecha_eliminacion"); ?></td>
+                                           
+                                                                                         
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
@@ -219,7 +223,7 @@ if(isset($varMsj))
                                             </td>
                                             
                                             <?php
-endforeach;
+
 endforeach;
 ?>
                                         </tr>

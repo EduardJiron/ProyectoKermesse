@@ -178,7 +178,7 @@ if(isset($varMsj))
                                             <th>ID Kermesse</th>
                                             <th>Nombre</th>
                                             <th>Descripcion</th>
-                                            <th>Estado</th>
+                                            <th>Opciones</th>
 
                                         </tr>
                                     </thead>
@@ -200,7 +200,7 @@ if(isset($varMsj))
                                         </td>
                                             <td>   <?php echo $r->__GET("nombre"); ?>   </td>
                                             <td>   <?php echo $r->__GET("descripcion"); ?></td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>                                          
+                                                                                   
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">

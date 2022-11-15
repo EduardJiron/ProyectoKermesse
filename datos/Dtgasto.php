@@ -22,7 +22,7 @@ class Dtgasto extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $com= new Comunidad();
+                            $com= new gastos();
                             $com->__SET('id_registro_gastos', $r->id_registro_gastos);
                             $com->__SET('idKermesse', $r->idKermesse);
                             $com->__SET('idCatGastos', $r->idCatGastos);

@@ -1,23 +1,10 @@
-
-
-
-
-
-
 <?php
 
-include 'datos/DtListaPrecioDet.php';
-include 'entidades/lista_precio_det.php';
-include 'datos/Dtproducto.php';
-include 'entidades/producto.php';
+include 'datos/DtArqueoCajaDet.php';
+include 'entidades/arqueoCajaDet.php';
 
-$dtp = new DtProducto ();
-$par= new  Producto();
-
-
-$dt = new DtListaPrecioDet();
-$pa= new lista_precio_det();
-
+$dt = new DtArqueoCajaDet();
+$comunidad = new ArqueoCajaDet();
 
 
 
@@ -28,7 +15,6 @@ if(isset($varMsj))
   $varMsj = $_GET['msj'];
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +28,8 @@ if(isset($varMsj))
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
-        <link href="css/styles6.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styles7.css">
+        <link href="css/styles7.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles6.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome-free-6.2.0/css/all.min.css">
         <!-- DataTables -->
@@ -156,75 +142,79 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                    <h1 class="mt-4">Gestionar arqueo caja det</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Gestión de Usuarios</li>
+                            <li class="breadcrumb-item active">Gestión de Comunidad</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
+                            En esta pantalla se pueden visualizar y gestionar los datos de arqueo caja det. 
+                                Para gestionar los datos de arqueo caja det por favor de clic en el botón: 
                                 <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                                 Caja.
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
 
-                                <label> 
-                              
-                                    <thead>
-                                        <tr>
-                                            <th>ID </th>
-                                          
-                                            
-                                            <th>Precio Venta</th>
-                                            <th>producto</th>
-                                            <th>Opciones</th>
+                                <thead>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+<!-- Campos que van a aparecer en la pagina en linea-->
 
-                                        <?php
 
-                                        foreach ($dt->listListaPrecioDet() as $r):
-                                            foreach ($dtp->listProducto() as $s):
-                                        ?>
+    <tr>                                        
+        <th>ID</th>
+        <th>cantidad</th>
+        <th>Subtotal</th>
 
-                                        <tr>
-                                            <td>
-                                        <?php echo $r->__GET("id_listaprecio_det"); ?>
-                                            </td>
-                                     
-                                            <td>   <?php echo $s->__GET("nombre"); ?></td>   
-                                            <td>   <?php echo $r->__GET("precio_venta"); ?></td>       
-                                                                       
+        
+    </tr>
+</thead>
+<tbody>
 
-                                            <td>
-                                                <a href="#" target="_blank" title="Visualizar los datos de un usuario">
-                                                    <i class="fa-solid fa-eye"></i>
-                                                </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
-                                                </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
-                                                </a>
-                                            </td>
-                                            
-                                            <?php
-endforeach;
+    <?php
+
+    foreach ($dt->listArqueoCaja() as $r):
+    ?>
+
+    <tr>
+        <td>
+    <?php echo $r->__GET("idArqueoCaja_Det"); ?>
+        </td>
+        <td>
+    <?php echo $r->__GET("cantidad"); ?>
+    
+        
+    </td>
+      
+        <td>   <?php echo $r->__GET("subtotal"); ?></td>
+       
+
+       
+
+        <td>
+            <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
+                <i class="fa-solid fa-eye"></i>
+            </a>&nbsp;
+            <a href="#" target="_blank" title="Modificar los datos de la comunidad">
+                <i class="fa-solid fa-user-pen"></i>
+            </a>&nbsp;
+            <a href="#" target="_blank" title="Dar de baja a una comunidad">
+                <i class="fa-solid fa-user-minus"></i> 
+            </a>
+        </td>
+        
+        <?php
+
 endforeach;
 ?>
-                                        </tr>
-                                    </tbody>
-                                  
+    </tr>
+</tbody>
                                 </table>
                             </div>
                         </div>

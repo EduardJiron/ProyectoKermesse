@@ -2,6 +2,12 @@
 
 include 'datos/DtIngresoComunidadDet.php';
 include 'entidades/IngresoComunidadDet.php';
+include 'datos/DtComunidad.php';
+include 'entidades/Comunidad.php';
+
+$dtc = new DtComunidad();
+$comunidad = new Comunidad();
+
 
 $dt = new DtIngresoComunidadDet();
 $ingresocomunidaddet = new IngresoComunidadDet();
@@ -163,13 +169,14 @@ if(isset($varMsj))
                                 <table id="tbl_denominacion" class="table table-bordered table-striped">
                                     <thead>
 
-                                    
+
 
                                         <tr>                                        
                                             <th>ID</th>                                            
                                             <th>Denominacion </th>
                                             <th>Cantidad </th>
                                             <th>Subtotal bono </th>
+                                            <th>opciones</th>
                                             
                                             
                                         </tr>
@@ -179,6 +186,7 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listIngresoComunidadDet() as $r):
+                                          
                                         ?>
 
                                         <tr>

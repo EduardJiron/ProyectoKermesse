@@ -21,14 +21,14 @@ class DtTasaCambioDet extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $pro= new tasaCambioDet();
-                            $pro->__SET('id_tasaCambio_Det', $r->id_tasaCambio_Det);
-                            $pro->__SET('id_tasaCambio ', $r->id_tasaCambio);
-                            $pro->__SET('fecha ', $r->fecha );
-                            $pro->__SET('tipoCambio', $r->tipoCambio);
+                            $det= new tasaCambioDet();
+                            $det->__SET('id_tasaCambio_Det', $r->id_tasaCambio_Det);
+                            $det->__SET('id_tasaCambio ', $r->id_tasaCambio);
+                            $det->__SET('fecha ', $r->fecha );
+                            $det->__SET('tipoCambio', $r->tipoCambio);
                         
 
-                            $result[]=$pro;
+                            $result[]=$det;
                     }
                     
                     $this->myCon= parent ::desconectar();
