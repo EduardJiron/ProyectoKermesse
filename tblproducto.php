@@ -6,11 +6,11 @@
 
 <?php
 
-include 'datos/DtOpciones.php';
-include 'entidades/Opciones.php';
+include 'datos/Dtproducto.php';
+include 'entidades/producto.php';
 
-$dt = new DtOpciones();
-$par= new Opciones();
+$dt = new DtProducto ();
+$par= new  Producto();
 
 
 
@@ -32,7 +32,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Opciones</title>
+        <title>Gestión Usuarios</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -150,22 +150,22 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Opciones</h1>
+                        <h1 class="mt-4">Gestionar Productos</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Index</a></li>
-                            <li class="breadcrumb-item active">Opciones</li>
+                            <li class="breadcrumb-item"><a href="index.php">home</a></li>
+                            <li class="breadcrumb-item active">Gestion de producto</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar las opciones de los usuarios activos/inactivos. 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-wrench"></i> Opciones</a>.
-                                
+                                En esta pantalla se pueden visualizar y gestionar los datos de los productos activos. 
+                                Para crear un nuevo producto por favor de hacer clic en el botón: 
+                                <a target="_blank" href="newUsuario.php"><i class="fa-brands fa-product-hunt"></i> nuevo producto</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Opciones
+                                Usuarios Activos
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
@@ -174,30 +174,35 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>ID Opciones</th>
-                                            <th>Descripción</th>
-                                            <th>Estado</th>
+                                            <th>id</th>
+                                            <th>nombre</th>
+                                            <th>descripcion</th>
+                                            <th>cantidad</th>
+                                            <th>precio sugerido</th>
+                                            <th>Opciones</th>
+                                        
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <?php
 
-                                        foreach ($dt->listOpciones() as $r):
+                                        foreach ($dt->listProducto() as $r):
                                         ?>
 
                                         <tr>
                                             <td>
-                                        <?php echo $r->__GET("idopciones"); ?>
+                                        <?php echo $r->__GET("id_producto"); ?>
                                             </td>
                                             <td>
-                                        <?php echo $r->__GET("opciones"); ?>
+                                        <?php echo $r->__GET("nombre"); ?>
                                         
                                             
                                         </td>
-                                            <td>   <?php echo $r->__GET("id_opciones"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("opcion_descripcion"); ?></td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>
+                                            <td>   <?php echo $r->__GET("descripcion"); ?>   </td>
+                                            <td>   <?php echo $r->__GET("cantidad"); ?></td>
+                                            <td>   <?php echo $r->__GET("preciov_sugerido"); ?></td>
+                                      
                                             
 
                                             <td>
@@ -218,6 +223,7 @@ endforeach;
 ?>
                                         </tr>
                                     </tbody>
+                                  
                                 </table>
                             </div>
                         </div>

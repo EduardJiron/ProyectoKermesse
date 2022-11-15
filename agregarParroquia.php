@@ -2,23 +2,8 @@
 
 
 <?php
-include 'datos/Dtproducto.php';
-include 'entidades/producto.php';
-include 'datos/DtComunidad.php';
-include 'entidades/Comunidad.php';
-include 'datos/Dtctgproducto.php';
-include 'entidades/ctgproducto.php';
-
-$dtCP = new Dtctgproducto();
-$mon= new ctgproducto();
 
 
-$dtC = new DtComunidad();
-$comunidad = new Comunidad();
-
-
-$dt = new DtProducto();
-$pro= new Producto();
 
 
 
@@ -138,10 +123,7 @@ $pro= new Producto();
                             </a>
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
+                   
                 </nav>
             </div>
             <div id="layoutSidenav_content">
@@ -151,90 +133,90 @@ $pro= new Producto();
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar parroquia</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar</h3></div>
                                     <div class="card-body">
                                         <form>
-
-                                            <div class="row mb-3">
-
-                                            <br>
-
+                                        <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre Parroquia</label>
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Nombre</label>
+                                                   
                                                     </div>
                                                 </div>
-
-                                                <br>
-                                                <br>
-                                            
-
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Dirección</label>
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">direccion</label>
                                                     </div>
                                                 </div>
-
-                                                <br>
-                                                <br>
-
+                                            </div>
+                                            <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Telefono</label>
                                                     </div>
                                                 </div>
-
-                                                <br>
-                                                <br>
-
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Parroco</label>
+                                                    
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <label for="inputLastName">Parroco</label>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    
+                                                    <div class="form-floating">
+                                                    <h4 class="text-center">Seleccione imagen de logo</h4>
+                                                    <div class="form-floating">
+         
+                                                  
+        
+        </div>
                                                     </div>
                                                 </div>
 
-                                                <br>
-                                                <br>
-
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Logo (imagen.png)</label>
+                                                    
+                                                    
+                                                    <div class="form-floating">
+                                                    <div class="row-sm-6" >
+                                                    <input type="file" id="file" name="file" class="form-control" >
+                                                    
+                                                    </div>
+                                                
                                                     </div>
                                                 </div>
-
-                                                <br>
-                                                <br>
-
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Sitio web</label>
-                                                    </div>
-                                                </div>
+                                                
                                             
                                             </div>
                                         </div>
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">
                                                
-                                                <label for="inputEmail">Correo</label>
-                                            </div>
-                                            <div class="row mb-3">
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                     
-                                                       
+                                            <div class="col-md-6">
+                                                    
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <label for="inputLastName">sitio web</label>
+                                                        <br>
                                                     </div>
                                                 </div>
                                             </div>
+                                          
+                                          
+                                               
+                                                
+                                            
+                                    
+                                            
+                                            
+                                           
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Agregar parroquia</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar parroquia </a></div>
                                             </div>
                                         </form>
                                     </div>

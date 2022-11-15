@@ -15,7 +15,7 @@ class DtProducto extends conexion
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_usuario";
+                    $querysql= "SELECT * FROM tbl_productos";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();

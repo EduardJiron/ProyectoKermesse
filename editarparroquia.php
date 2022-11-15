@@ -1,3 +1,20 @@
+
+
+
+<?php
+include 'datos/DtParroquia.php';
+include 'entidades/Parroquia.php';
+
+$dt = new DtParroquia();
+$par= new Parroquia();
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,8 +25,11 @@
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="./css/styles3.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./css/styles4.css">
+        
+        <link href="css/styles6.css" rel="stylesheet" />
+        <link href="css/styles7.css" rel="stylesheet" />
+
+        
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -106,10 +126,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
+                   
                 </nav>
             </div>
             <div id="layoutSidenav_content">
@@ -119,20 +136,43 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar usuario</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar parroquia</h3></div>
                                     <div class="card-body">
                                         <form>
-                                            <div class="row mb-3">
+                                        <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre de usuario</label>
+                                                      
+                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
+                                                    <option selected>Selecionar parroquia</option>
+                                                    
+                                                    <?php foreach ($dt->listparroquia() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("nombre"); ?></option>
+                                    
+                                   
+
+                                                    <?php
+                                                        endforeach;
+                                                        ?>
+                                                  
+                                                    </select>
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                        <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Nombre</label>
+                                                   
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Contraseña</label>
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">direccion</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -140,34 +180,68 @@
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre</label>
+                                                        <label for="inputFirstName">Telefono</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
+                                                    
                                                     <div class="form-floating">
                                                         <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Apellido</label>
+                                                        <label for="inputLastName">Parroco</label>
+                                                        <br>
                                                     </div>
                                                 </div>
+                                                
+                                                <div class="col-md-6">
+                                                    
+                                                    <div class="form-floating">
+                                                    <h4 class="text-center">Seleccione imagen de logo</h4>
+                                                    <div class="form-floating">
+         
+                                                  
+        
+        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    
+                                                    
+                                                    <div class="form-floating">
+                                                    <div class="row-sm-6" >
+                                                    <input type="file" id="file" name="file" class="form-control" >
+                                                    
+                                                    </div>
+                                                
+                                                    </div>
+                                                </div>
+                                                
                                             
                                             </div>
                                         </div>
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Correo</label>
-                                            </div>
-                                            <div class="row mb-3">
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                     
-                                                       
+                                               
+                                            <div class="col-md-6">
+                                                    
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <label for="inputLastName">sitio web</label>
+                                                        <br>
                                                     </div>
                                                 </div>
                                             </div>
+                                          
+                                          
+                                               
+                                                
+                                            
+                                    
+                                            
+                                            
+                                           
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Crear Usuaro</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar parroquia </a></div>
                                             </div>
                                         </form>
                                     </div>
