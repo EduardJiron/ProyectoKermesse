@@ -3,34 +3,31 @@
 
 include_once('conexion.php');
 
-class DtTasaCambio extends conexion
+class DtRolUsuario extends conexion
 {
 
     private $myCon;
 
-    public function listTasaC()
+    public function listRolUsua()
     {
             try{
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_tasacambio";
+                    $querysql= "SELECT * FROM rol_usuario";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $pro= new tasaCambios();
-                            $pro->__SET('id_tasaCambio', $r->id_tasaCambio);
-                            $pro->__SET('id_monedaO ', $r->id_monedaO );
-                            $pro->__SET('id_monedaC ', $r->id_monedaC );
-                            $pro->__SET('mes', $r->mes);
-                            $pro->__SET('anio', $r->anio);
-                            $pro->__SET('estado', $r->estado);
-
-
-                            $result[]=$pro;
+                            $rou= new moneda();
+                            $rou->__SET('id_rol_usuario', $r->id_rol_usuarioa);
+                            $rou->__SET('tbl_usuario_id_usuario', $r->tbl_usuario_id_usuario);
+                            $rou->__SET('tbl_rol_id_rol', $r->tbl_rol_id_rol);
+            
+                           
+                            $result[]=$rou;
                     }
                     
                     $this->myCon= parent ::desconectar();

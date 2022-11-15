@@ -3,32 +3,34 @@
 
 include_once('conexion.php');
 
-class DtTasaCambioDet extends conexion
+class DtTasaCambios extends conexion
 {
 
     private $myCon;
 
-    public function listTasaCDET()
+    public function listTasaC()
     {
             try{
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tasacambio_det";
+                    $querysql= "SELECT * FROM tbl_tasacambio";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $det= new tasaCambioDet();
-                            $det->__SET('id_tasaCambio_Det', $r->id_tasaCambio_Det);
-                            $det->__SET('id_tasaCambio ', $r->id_tasaCambio);
-                            $det->__SET('fecha ', $r->fecha );
-                            $det->__SET('tipoCambio', $r->tipoCambio);
-                        
+                            $cat= new tasaCambios();
+                            $cat->__SET('id_tasaCambio', $r->id_tasaCambio);
+                            $cat->__SET('id_monedaO ', $r->id_monedaO );
+                            $cat->__SET('id_monedaC ', $r->id_monedaC );
+                            $cat->__SET('mes', $r->mes);
+                            $cat->__SET('anio', $r->anio);
+                            $cat->__SET('estado', $r->estado);
 
-                            $result[]=$det;
+
+                            $result[]=$cat;
                     }
                     
                     $this->myCon= parent ::desconectar();
