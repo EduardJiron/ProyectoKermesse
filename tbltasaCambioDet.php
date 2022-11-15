@@ -176,13 +176,13 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar la tasa de cambio det. 
                                 Para crear un nuevo tasa de cambio det por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo rol</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo tasa de cambio det</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Roles activos
+                                Tasa de cambios
                             </div>
                             <div class="card-body">
                                 <table id="tbl_Cambdet" class="table table-bordered table-striped">

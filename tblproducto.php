@@ -195,7 +195,7 @@ if(isset($varMsj))
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                               productos activos
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">

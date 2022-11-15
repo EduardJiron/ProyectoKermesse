@@ -182,7 +182,7 @@ if(isset($varMsj))
                             <div class="card-body">
                             En esta pantalla se pueden visualizar y gestionar los datos de arqueo caja det. 
                                 Para gestionar los datos de arqueo caja det por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> arqueo de caja</a>.
                             </div>
                         </div>
                         <div class="card mb-4">

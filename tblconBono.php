@@ -183,15 +183,15 @@ if(isset($varMsj))
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
+                                En esta pantalla se pueden visualizar y gestionar los datos de los bonos activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> bonos</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                                Bonos
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">

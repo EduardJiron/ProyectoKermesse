@@ -189,13 +189,13 @@ if(isset($varMsj))
                         <div class="card mb-4">
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las categorias de los gastos. 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Opciones</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Categorias</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Opciones
+                               categorias de gasto
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">

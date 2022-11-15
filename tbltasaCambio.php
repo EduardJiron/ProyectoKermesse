@@ -114,7 +114,7 @@ if(isset($varMsj))
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Roles activos
+                               Tasa de cambios
                             </div>
                             <div class="card-body">
                                 <table id="tbl_tasCam" class="table table-bordered table-striped">

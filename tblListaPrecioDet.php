@@ -186,22 +186,22 @@ if(isset($varMsj))
             <div id="layoutSidenav_content">
                
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gestionar Datos de Usuarios</h1>
+                        <h1 class="mt-4">Gestionar lista de precio</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Index</a></li>
                             <li class="breadcrumb-item active">Gestión de Usuarios</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
-                                Para crear un nuevo usuario por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                En esta pantalla se pueden visualizar y gestionar la lista de precio 
+                                Para crear un nuevo precio por favor de clic en el botón: 
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i>Nuevo precio</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                               Precios
                             </div>
                             <div class="card-body">
                                 <table id="tbl_usuarios" class="table table-bordered table-striped">
@@ -213,8 +213,9 @@ if(isset($varMsj))
                                             <th>ID </th>
                                           
                                             
-                                            <th>Precio Venta</th>
+                                           
                                             <th>producto</th>
+                                            <th>Precio Venta</th>
                                             <th>Opciones</th>
 
                                         </tr>

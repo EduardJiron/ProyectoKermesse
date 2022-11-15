@@ -197,15 +197,15 @@ if(isset($varMsj))
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de las pagosa de la monedas activos/inactivos. 
+                                En esta pantalla se pueden visualizar y gestionar los datos de las pagos de la monedas activos/inactivos. 
                                 Para gestinar por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva moneda</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Usuarios Activos
+                                Monedas
                             </div>
                             <div class="card-body">
                                 <table id="tbl_moneda" class="table table-bordered table-striped">
