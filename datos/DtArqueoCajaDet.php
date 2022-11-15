@@ -4,12 +4,12 @@
 
 include_once('conexion.php');
 
-class DtArqueoCaja extends conexion
+class DtArqueoCajaDet extends conexion
 {
 
     private $myCon;
 
-    public function listArqueoCaja()
+    public function listArqueoCajaDet()
     {
             try{
 

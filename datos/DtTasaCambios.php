@@ -3,7 +3,7 @@
 
 include_once('conexion.php');
 
-class DtTasaCambio extends conexion
+class DtTasaCambios extends conexion
 {
 
     private $myCon;
