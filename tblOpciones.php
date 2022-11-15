@@ -184,7 +184,7 @@ if(isset($varMsj))
                         <div class="card mb-4">
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las opciones de los usuarios activos/inactivos. 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-wrench"></i> Opciones</a>.
+                                <a target="_blank" href="agregarOpciones.php"><i class="fa-solid fa-wrench"></i> Opciones</a>.
                                 
                             </div>
                         </div>
@@ -227,7 +227,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarOpciones.php" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">

@@ -1,9 +1,9 @@
 <?php
 
-include 'datos/DtTasaCambio.php';
-include 'entidades/tasaCambio.php';
+include 'datos/DtTasaCambios.php';
+include 'entidades/tasaCambios.php';
 
-$dt = new DtTasaCambio();
+$dt = new DtTasaCambios();
 $rol = new tasaCambios();
 
 
@@ -151,7 +151,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las tasasa de cambios. 
                                 Para crear un nuevo tasa de cambio por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva tasa de cambio</a>.
+                                <a target="_blank" href="agregarTasaCambio.php"><i class="fa-solid fa-user-plus"></i> Nueva tasa de cambio</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -197,7 +197,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los roles ">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los roles ">
+                                                <a href="editarTasaCambio.php" target="_blank" title="Modificar los roles ">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja a un rol">

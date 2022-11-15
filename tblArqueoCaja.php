@@ -3,7 +3,7 @@
 include 'datos/DtArqueoC.php';
 include 'entidades/ArqueoCaja.php';
 
-$dt = new DtArqueoCaja();
+$dt = new DtArqueoC();
 $caj = new arqueoCaja();
 
 
@@ -151,7 +151,7 @@ if(isset($varMsj))
                             <div class="card-body">
                             En esta pantalla se pueden visualizar y gestionar los datos de arqueo caja. 
                                 Para gestionar los datos de la caja por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="agregarArqueoCaja.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -214,7 +214,7 @@ if(isset($varMsj))
             <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
                 <i class="fa-solid fa-eye"></i>
             </a>&nbsp;
-            <a href="#" target="_blank" title="Modificar los datos de la comunidad">
+            <a href="editarArqueoCaja.php" target="_blank" title="Modificar los datos de la comunidad">
                 <i class="fa-solid fa-user-pen"></i>
             </a>&nbsp;
             <a href="#" target="_blank" title="Dar de baja a una comunidad">

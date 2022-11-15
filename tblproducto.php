@@ -185,7 +185,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los productos activos. 
                                 Para crear un nuevo producto por favor de hacer clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-brands fa-product-hunt"></i> nuevo producto</a>.
+                                <a target="_blank" href="agregarProducto.php"><i class="fa-brands fa-product-hunt"></i> nuevo producto</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -235,7 +235,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarProducto" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">
