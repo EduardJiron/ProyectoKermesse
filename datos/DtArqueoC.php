@@ -4,7 +4,7 @@
 
 include_once('conexion.php');
 
-class DtArqueoCaja extends conexion
+class DtArqueoC extends conexion
 {
 
     private $myCon;
