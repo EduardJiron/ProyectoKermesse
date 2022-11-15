@@ -199,7 +199,9 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de las pagos de la monedas activos/inactivos. 
                                 Para gestinar por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva moneda</a>.
+
+                                <a target="_blank" href="agregarMoneda.php"><i class="fa-solid fa-user-plus"></i> Nmonedas</a>.
+
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -246,7 +248,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarMoneda.php" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">

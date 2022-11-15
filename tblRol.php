@@ -181,7 +181,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los roles activos/inactivos. 
                                 Para crear un nuevo rol por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nuevo rol</a>.
+                                <a target="_blank" href="agregarRol.php"><i class="fa-solid fa-user-plus"></i> Nuevo rol</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -229,7 +229,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los roles ">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los roles ">
+                                                <a href="editarRol.php" target="_blank" title="Modificar los roles ">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja a un rol">

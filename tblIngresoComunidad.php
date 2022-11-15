@@ -192,7 +192,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los ingresos de una nueva comunidad. 
                                 Para crear el ingreso de una nueva comunidad por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Ingreso de una nueva comunidad </a>
+                                <a target="_blank" href="agregarIngresoComunidadDet.php"><i class="fa-solid fa-user-plus"></i> Ingreso de una nueva comunidad </a>
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -261,7 +261,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los ingresos de las comunidades ">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los ingresos de una comunidad ">
+                                                <a href="editarIngresoComunidad.php" target="_blank" title="Modificar los ingresos de una comunidad ">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja a los ingresos de una comunidad">

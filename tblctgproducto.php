@@ -187,7 +187,11 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los usuarios activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
+<<<<<<< HEAD
                                 <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> nueva etiqueta/a>.
+=======
+                                <a target="_blank" href="agregarCtgProducto.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+>>>>>>> 2b87b752d97914c5ab5f07eaf2b1b6e88796c8a8
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -235,7 +239,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarCtgProducto.php" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">

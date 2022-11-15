@@ -182,7 +182,9 @@ if(isset($varMsj))
                             <div class="card-body">
                             En esta pantalla se pueden visualizar y gestionar los datos de arqueo caja det. 
                                 Para gestionar los datos de arqueo caja det por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> arqueo de caja</a>.
+
+                                <a target="_blank" href="agregarArqueoCajaDet.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -210,7 +212,11 @@ if(isset($varMsj))
 
     <?php
 
+<<<<<<< HEAD
+    foreach ($dt->listArqueoCajaDet() as $r):
+=======
     foreach ($dt->listArqueoCajadet() as $r):
+>>>>>>> 51bef8ee80e38476eb1a0c1f89c460367d58a82c
     ?>
 
     <tr>
@@ -232,7 +238,7 @@ if(isset($varMsj))
             <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
                 <i class="fa-solid fa-eye"></i>
             </a>&nbsp;
-            <a href="#" target="_blank" title="Modificar los datos de la comunidad">
+            <a href="editarArqueoCajaDet.php" target="_blank" title="Modificar los datos de la comunidad">
                 <i class="fa-solid fa-user-pen"></i>
             </a>&nbsp;
             <a href="#" target="_blank" title="Dar de baja a una comunidad">

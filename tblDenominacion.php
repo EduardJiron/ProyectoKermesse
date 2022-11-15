@@ -181,7 +181,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las denominaciones de las monedas. 
                                 Para crear una nueva denominacion de una moneda por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> Nueva denominacion de moneda</a>
+                                <a target="_blank" href="agregarDenominacion.php"><i class="fa-solid fa-user-plus"></i> Nueva denominacion de moneda</a>
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -230,7 +230,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar las denominaciones ">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar las denominaciones ">
+                                                <a href="editarDenominacion" target="_blank" title="Modificar las denominaciones ">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja a una denominacion">

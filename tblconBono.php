@@ -185,7 +185,11 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los bonos activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
+<<<<<<< HEAD
                                 <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> bonos</a>.
+=======
+                                <a target="_blank" href="agregarBono.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+>>>>>>> 2b87b752d97914c5ab5f07eaf2b1b6e88796c8a8
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -231,7 +235,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarBono.php" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">
