@@ -176,9 +176,13 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar la tasa de cambio det. 
                                 Para crear un nuevo tasa de cambio det por favor de clic en el botón: 
+<<<<<<< HEAD
                                
                                 <a target="_blank" href="agregarTasaCambioDet.php"><i class="fa-solid fa-user-plus"></i> Nueva tasa de cambio</a>.
 
+=======
+                                <a target="_blank" href="agregarTasaCambio.php"><i class="fa-solid fa-user-plus"></i> Nueva tasa de cambio</a>.
+>>>>>>> f1d0057823843fc744bddc70fe1fd2ae712e0320
                             </div>
                         </div>
                         <div class="card mb-4">

@@ -212,11 +212,11 @@ if(isset($varMsj))
 
     <?php
 
-<<<<<<< HEAD
-    foreach ($dt->listArqueoCajaDet() as $r):
-=======
+
+    
+
     foreach ($dt->listArqueoCajadet() as $r):
->>>>>>> 51bef8ee80e38476eb1a0c1f89c460367d58a82c
+
     ?>
 
     <tr>
