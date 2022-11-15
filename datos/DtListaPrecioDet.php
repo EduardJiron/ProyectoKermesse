@@ -15,7 +15,7 @@ class DtListaPrecioDet extends conexion
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_lista_precio_det";
+                    $querysql= "SELECT * FROM tbl_listaprecio_det";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();

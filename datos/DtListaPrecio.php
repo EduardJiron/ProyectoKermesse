@@ -22,7 +22,7 @@ class DtListaPrecio extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $par= new Parroquia();
+                            $par= new lista_precio();
                             $par->__SET('id_lista_precio', $r->id_lista_precio);
                             $par->__SET('id_kermesse', $r->id_kermesse);
                             $par->__SET('nombre', $r->nombre);

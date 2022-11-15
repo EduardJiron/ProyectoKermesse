@@ -6,8 +6,8 @@
 
 <?php
 
-include 'datos/DtUsuario.php';
-include 'entidades/Usuarios.php';
+include './datos/DtUsuario.php';
+include './entidades/Usuario.php';
 
 $dt = new DtUsuario();
 $user= new Usuario();
