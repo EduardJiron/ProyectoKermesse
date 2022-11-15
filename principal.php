@@ -18,7 +18,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="principal.php">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="principal.php">kermesse</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -143,56 +143,10 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar usuario</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Bienvenido</h3></div>
                                     <div class="card-body">
                                         <form>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre de usuario</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Contraseña</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Apellido</label>
-                                                    </div>
-                                                </div>
                                             
-                                            </div>
-                                        </div>
-                                            
-                                            <div class="form-floating mb-3" style="width: 510px; left: 15px;">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Correo</label>
-                                            </div>
-                                            <div class="row mb-3">
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                     
-                                                       
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Crear Usuaro</a></div>
-                                            </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">

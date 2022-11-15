@@ -51,7 +51,7 @@ if(isset($varMsj))
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="principal.php">kermesse</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -74,7 +74,7 @@ if(isset($varMsj))
                 </li>
             </ul>
         </nav>
-        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/loop.mp4" type="video/mp4" /></video>
         <div class="mastheade">
             
         <div id="layoutSidenav">
@@ -239,7 +239,7 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarProducto" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarProducto.php" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">
