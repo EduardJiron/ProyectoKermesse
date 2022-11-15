@@ -2,8 +2,11 @@
 
 
 <?php
+include 'datos/DtProducto.php';
+include 'entidades/producto.php';
 
-
+$dt = new DtProducto();
+$par= new producto();
 
 
 
@@ -133,9 +136,31 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Producto</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Producto</h3></div>
                                     <div class="card-body">
                                         <form>
+                                        <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                      
+                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
+                                                    <option selected>Selecionar Producto</option>
+                                                    
+                                                    <?php foreach ($dt->listProducto() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("nombre"); ?></option>
+                                    
+                                   
+
+                                                    <?php
+                                                        endforeach;
+                                                        ?>
+                                                  
+                                                    </select>
+                                                    </div>
+                                                    <br>
+                                                </div>
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
@@ -146,7 +171,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Contraseña" />
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Descripción</label>
                                                     </div>
                                                 </div>
@@ -165,23 +190,14 @@
                                                         <label for="inputLastName">Precio Sugerido</label>
                                                         <br>
                                                     </div>
-                                                </div>                                                                                            
+                                                </div>                                                
                                             
                                             </div>
                                         </div>
                                             
-                                          
-                                          
-                                          
-                                               
-                                                
-                                            
-                                    
-                                            
-                                            
-                                           
+                                            <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Producto</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Producto</a></div>
                                             </div>
                                         </form>
                                     </div>

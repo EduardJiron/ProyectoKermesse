@@ -2,8 +2,11 @@
 
 
 <?php
+include 'datos/DtUsuario.php';
+include 'entidades/Usuario.php';
 
-
+$dt = new DtUsuario();
+$par= new Usuario();
 
 
 
@@ -133,21 +136,43 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Producto</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Usuario</h3></div>
                                     <div class="card-body">
                                         <form>
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
+                                                      
+                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
+                                                    <option selected>Selecionar Usuario</option>
+                                                    
+                                                    <?php foreach ($dt->listUsuario() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
+                                    
+                                   
+
+                                                    <?php
+                                                        endforeach;
+                                                        ?>
+                                                  
+                                                    </select>
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                        <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre</label>
+                                                        <label for="inputFirstName">Usuario</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Contraseña" />
-                                                        <label for="inputFirstName">Descripción</label>
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Contraseña</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,33 +180,34 @@
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Cantidad</label>
+                                                        <label for="inputFirstName">Nombres</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
                                                         <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Precio Sugerido</label>
+                                                        <label for="inputLastName">Apellidos</label>
                                                         <br>
                                                     </div>
-                                                </div>                                                                                            
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <label for="inputLastName">Email</label>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                
                                             
                                             </div>
                                         </div>
                                             
-                                          
-                                          
-                                          
-                                               
-                                                
-                                            
-                                    
-                                            
-                                            
-                                           
+                                            <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Producto</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Usuario</a></div>
                                             </div>
                                         </form>
                                     </div>

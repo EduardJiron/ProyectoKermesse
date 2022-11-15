@@ -17,7 +17,7 @@ class Conexion
         $dbName = 'dbkermesse';
         $userName = 'root';
 
-        $pwd = 'Temporal2022++';
+        $pwd = 'Temporal2022+';
 
 
 
