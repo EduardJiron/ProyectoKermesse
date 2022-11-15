@@ -79,6 +79,7 @@
                                     <a class="nav-link" href="tblctgproducto.php">Categorias</a>
                                     <a class="nav-link" href="tblListaPrecioDet.php">precios</a>
                                     <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
+                                    <a class="nav-link" href="tblconBono.php">bonos</a>
                                    
                                 </nav>
                             </div>
@@ -92,8 +93,10 @@
                                     </a>
                                              
                                     <a class="nav-link" href="tblIngresoComunidad.php">Ingreso comunidad</a>
-                                    <a class="nav-link" href="tblIngresoComunidadDet.php">bonos comunidad</a>
+                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
                                     <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
+                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
+                                    <a class="nav-link" href="tbldenominacion.php">Denominacion</a>
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
@@ -102,18 +105,23 @@
                                             <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
+                                    
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
+                                  
+                               
+                                    
+                                </nav>
+                                <a  class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>           
+                                Comunidad
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
+                                            <a class="nav-link" href="tblcomunidad.php">Comunidades</a>
+                                            <a class="nav-link" href="tblparroquia.php">parroquia</a>
+                                            <a class="nav-link" href="">500 Page</a>
                                         </nav>
-                                    </div>
-                                </nav>
                             </div>
                             
                  

@@ -176,6 +176,7 @@ if(isset($varMsj))
                                             <th>Denominacion </th>
                                             <th>Cantidad </th>
                                             <th>Subtotal bono </th>
+                                            <th>opciones</th>
                                             
                                             
                                         </tr>

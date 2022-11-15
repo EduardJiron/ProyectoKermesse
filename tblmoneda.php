@@ -191,7 +191,7 @@ if(isset($varMsj))
                                             <th>id</th>
                                             <th>nombre</th>
                                             <th>simbolo</th>
-                                            <th>estado</th>
+                                            <th>opciones</th>
                                            
                                         </tr>
                                     </thead>
@@ -212,7 +212,7 @@ if(isset($varMsj))
                                             
                                         </td>
                                             <td>   <?php echo $r->__GET("simbolo"); ?>   </td>
-                                            <td>   <?php echo $r->__GET("estado"); ?></td>
+                                      
                                             
                                             
 
