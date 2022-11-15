@@ -184,7 +184,7 @@ $pro= new Producto();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">
                                                
-                                                <label for="inputEmail">Correo</label>
+                                              
                                             </div>
                                             <div class="row mb-3">
                                                 

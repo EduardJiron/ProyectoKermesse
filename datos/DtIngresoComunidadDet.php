@@ -23,11 +23,11 @@ class DtIngresoComunidadDet extends conexion
                     {
                             $usu= new IngresoComunidadDet();
                             $usu->__SET('id_ingreso_comunidad_det', $r->id_ingreso_comunidad);
-                            $usu->__SET('id_ingreso_comunidad', $r->id_kermesse);   
-                            $usu->__SET('id_bono', $r->id_comunidad); 
-                            $usu->__SET('denominacion', $r->id_producto); 
-                            $usu->__SET('cantidad', $r->cant_productos); 
-                            $usu->__SET('subtotal_bono', $r->total_bonos); 
+                            $usu->__SET('id_ingreso_comunidad', $r->id_ingreso_comunidad);   
+                            $usu->__SET('id_bono', $r->id_bono); 
+                            $usu->__SET('denominacion', $r->denominacion); 
+                            $usu->__SET('cantidad', $r->cantidad); 
+                            $usu->__SET('subtotal_bono', $r->subtotal_bono); 
                            
                                                      
 

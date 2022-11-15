@@ -15,14 +15,14 @@ class DtListaPrecioDet extends conexion
 
                     $this->myCon= parent ::conectar();
                     $result= array();
-                    $querysql= "SELECT * FROM tbl_lista_precio";
+                    $querysql= "SELECT * FROM tbl_lista_precio_det";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute();
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $par= new Parroquia();
+                            $par= new lista_precio_det ();
                             $par->__SET('id_listaprecio_det', $r->id_listaprecio_det);
                             $par->__SET('id_lista_precio', $r->id_lista_precio);
                             $par->__SET('id_producto', $r->id_producto);
