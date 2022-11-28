@@ -87,9 +87,9 @@ $pro= new Producto();
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblusuario.php">Usuarios</a>
-                                            <a class="nav-link" href="tblrol.php">rol</a>
-                                            <a class="nav-link" href="tblopciones.php">opciones</a>
-                                            <a class="nav-link" href="tblopciones.php">asignar rol</a>
+                                            <a class="nav-link" href="tblrol.php">Rol</a>
+                                            <a class="nav-link" href="tblopciones.php">Opciones</a>
+                                            <a class="nav-link" href="tblopciones.php">Asignar rol</a>
                                         </nav>
                                     </div>
                       
