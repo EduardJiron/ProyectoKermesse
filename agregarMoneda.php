@@ -234,7 +234,7 @@ $pro= new Producto();
                                                 </div>
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Agregar Moneda</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblmoneda.php">Agregar Moneda</a></div>
                                             </div>
                                         </form>
                                     </div>

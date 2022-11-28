@@ -73,8 +73,8 @@
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblusuario.php">Usuarios</a>
                                             <a class="nav-link" href="tblrol.php">rol</a>
-                                            <a class="nav-link" href="tblopciones.php">opciones</a>
-                                            <a class="nav-link" href="tblopciones.php">asignar rol</a>
+                                            <a class="nav-link" href="tblopciones.php">Opciones</a>
+                                            <a class="nav-link" href="tblopciones.php">Asignar rol</a>
                                         </nav>
                                     </div>
                       
@@ -218,7 +218,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Usuario</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblUsuario.php">Agregar Usuario</a></div>
                                             </div>
                                         </form>
                                     </div>
