@@ -252,7 +252,7 @@
                                         </div>
  
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Kermesse</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblkermesse.php">Agregar Kermesse</a></div>
                                             </div>
                                         </form>
                                     </div>

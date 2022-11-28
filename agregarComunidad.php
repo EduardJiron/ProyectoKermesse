@@ -206,7 +206,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Comunidad</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblComunidad.php">Agregar Comunidad</a></div>
                                             </div>
                                         </form>
                                     </div>

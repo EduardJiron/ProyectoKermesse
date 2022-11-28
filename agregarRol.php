@@ -223,7 +223,7 @@ $pro= new Producto();
                                                 </div>
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Agregar Rol</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblRol.php">Agregar Rol</a></div>
                                             </div>
                                         </form>
                                     </div>
