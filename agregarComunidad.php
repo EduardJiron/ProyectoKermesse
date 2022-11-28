@@ -162,22 +162,27 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Comunidad</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="./negocio/Ngcomidad.php" method="POST"
+                                            
+                                        }> 
+
                                         <div class="row mb-3">
                                                
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombre</label>
+                                                        <input class="form-control" id="Nombre"name = "Nombre"
+                                                        type="text" placeholder="Enter your first name" />
+                                                        <label for="Nombre">Nombre</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Responsable</label>
+                                                        <input class="form-control" id="Responsable"name ="Responsable"
+                                                         type="text" placeholder="Enter your last name" />
+                                                        <label for="Responsable">Responsable</label>
                                                         <br>
                                                     </div>
                                                 </div>
@@ -185,8 +190,8 @@
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Descripción de Contribución</label>
+                                                        <input class="form-control" id="Desc_contribucion" name ="Desc_contribucion" type="text" placeholder="Enter your last name" />
+                                                        <label for="desc_contribucion">Descripción de Contribución</label>
                                                         <br>
                                                     </div>
                                                 </div>

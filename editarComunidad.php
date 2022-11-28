@@ -123,7 +123,7 @@ $par= new Comunidad();
                                   
                                     <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arquio caja</a>
     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
