@@ -160,27 +160,26 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Denominación</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Agregar Denominación</h3></div>
                                     <div class="card-body">
                                         <form>
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="valor" name = "Valor" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Valor</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Contraseña" />
+                                                    <input class="form-control" id="valor_letras" type="Valor en letras" placeholder="Contraseña" />
                                                         <label for="inputFirstName">Valor en Letras</label>
                                                     </div>
                                                 </div>
                                             </div>
                                            
-                                        </div>
-                                            
+                                        </div>  
                                           
                                           
                                           

@@ -42,6 +42,28 @@ class DtDenominacion extends conexion
             }
     }
 
+    public function insertDenominacion(Denominacion $dt)
+	{
+		try 
+		{
+			$this->myCon = parent::conectar();
+			$sql = "INSERT INTO dbkermesse.tbl_denominacion (valor,valor_letras,estado) 
+		        VALUES (?,?,?)";
+
+			$this->myCon->prepare($sql)
+		     ->execute(array(
+			 $dt->__GET('valor'),
+			 $dt->__GET('valor_letras'),			
+			 $dt->__GET('estado')));
+			
+			$this->myCon = parent::desconectar();
+		} 
+		catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+
 
 
 }
