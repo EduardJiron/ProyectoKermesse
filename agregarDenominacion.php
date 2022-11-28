@@ -191,7 +191,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Denominación</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblDenominacion.php">Agregar Denominación</a></div>
                                             </div>
                                         </form>
                                     </div>

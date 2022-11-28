@@ -45,6 +45,30 @@ class DtComunidad extends conexion
     }
 
 
+    public function insertcomu(Comunidad $com)
+    {
+            try
+            {
+                    $this->myCon= parent ::conectar();
+                    $querysql= "INSERT INTO dbkermess.tbl_comunidad (nombre, responsable, desc_contribucion, estado) VALUES (?,?,?,?)";
+
+                    $stm= $this->myCon->prepare($querysql);
+                    $stm->execute(array(
+                            $com->__GET('nombre'),
+                            $com->__GET('responsable'),
+                            $com->__GET('desc_contribucion'),
+                            $com->__GET('estado'),
+
+                    ));
+
+                    $this->myCon= parent ::desconectar();
+            }
+            catch(Exception $e)
+            {
+                    die($e->getMessage());
+            }
+    }
+
 
 }
 

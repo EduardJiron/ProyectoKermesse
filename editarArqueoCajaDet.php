@@ -208,7 +208,7 @@ $par= new ArqueoCajaDet();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Arqueo</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblArqueoCajaDet.php">Editar Arqueo</a></div>
                                             </div>
                                         </form>
                                     </div>

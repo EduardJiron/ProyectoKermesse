@@ -192,7 +192,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Agregar Categoría</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblctgproducto.php">Agregar Categoría</a></div>
                                             </div>
                                         </form>
                                     </div>

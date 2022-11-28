@@ -224,7 +224,7 @@ $par= new producto();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Producto</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblproducto.php">Editar Producto</a></div>
                                             </div>
                                         </form>
                                     </div>

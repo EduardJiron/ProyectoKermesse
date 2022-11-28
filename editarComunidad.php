@@ -123,7 +123,7 @@ $par= new Comunidad();
                                   
                                     <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arquio caja</a>
     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -216,7 +216,7 @@ $par= new Comunidad();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Comunidad</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblComunidad.php">Editar Comunidad</a></div>
                                             </div>
                                         </form>
                                     </div>
