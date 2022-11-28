@@ -61,7 +61,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                                   
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">Gestionar usuario</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -72,9 +72,9 @@
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblusuario.php">Usuarios</a>
-                                            <a class="nav-link" href="tblrol.php">rol</a>
-                                            <a class="nav-link" href="tblopciones.php">opciones</a>
-                                            <a class="nav-link" href="tblopciones.php">asignar rol</a>
+                                            <a class="nav-link" href="tblrol.php">Rol</a>
+                                            <a class="nav-link" href="tblopciones.php">Opciones</a>
+                                            <a class="nav-link" href="tblopciones.php">Asignar rol</a>
                                         </nav>
                                     </div>
                       
@@ -92,9 +92,9 @@
                                     <a class="nav-link" href="tblproducto.php">Productos</a>
                                     
                                     <a class="nav-link" href="tblctgproducto.php">Categorias</a>
-                                    <a class="nav-link" href="tblListaPrecioDet.php">precios</a>
-                                    <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
-                                    <a class="nav-link" href="tblconBono.php">bonos</a>
+                                    <a class="nav-link" href="tblListaPrecioDet.php">Precios</a>
+                                    <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
+                                    <a class="nav-link" href="tblconBono.php">Bonos</a>
                                    
                                 </nav>
                             </div>
@@ -108,19 +108,19 @@
                                     </a>
                                              
                                        <a class="nav-link" href="tblIngresoComunidad.php">Ingreso comunidad</a>
-                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
-                                    <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
-                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tblgastos.php">gasto</a>
+                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Detallde de ingreso comunidad</a>
+                                    <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
+                                    <a class="nav-link" href="tblmoneda.php">Moneda</a>
+                                    <a class="nav-link" href="tblgastos.php">Gasto</a>
 
-                                    <a class="nav-link" href="tblgastosdet.php">gasto det</a>
-                                      <a class="nav-link" href="tblconBono.php">bono</a>
+                                    <a class="nav-link" href="tblgastosdet.php">Detalle de gasto</a>
+                                      <a class="nav-link" href="tblconBono.php">Bono</a>
                                     <a class="nav-link" href="tblDenominacion.php">Denominacion</a>
-                                    <a class="nav-link" href="tblCategoriaGastos.php">categoria de gasto</a>
+                                    <a class="nav-link" href="tblCategoriaGastos.php">Categoria de gasto</a>
                                   
-                                    <a class="nav-link" href="tbltasaCambio.php">tasa de cambio</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arqueo caja</a>
     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">

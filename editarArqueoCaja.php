@@ -64,7 +64,7 @@ $par= new ArqueoCaja();
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                                  
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">Gestionar usuario</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -111,19 +111,19 @@ $par= new ArqueoCaja();
                                     </a>
                                              
                                        <a class="nav-link" href="tblIngresoComunidad.php">Ingreso comunidad</a>
-                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
-                                    <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
-                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tblgastos.php">gasto</a>
+                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Detalles de igresos  comunidad </a>
+                                    <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
+                                    <a class="nav-link" href="tblmoneda.php">Moneda</a>
+                                    <a class="nav-link" href="tblgastos.php">Gasto</a>
 
-                                    <a class="nav-link" href="tblgastosdet.php">gasto det</a>
-                                      <a class="nav-link" href="tblconBono.php">bono</a>
+                                    <a class="nav-link" href="tblgastosdet.php">Detalle de gastos</a>
+                                      <a class="nav-link" href="tblconBono.php">Bono</a>
                                     <a class="nav-link" href="tblDenominacion.php">Denominacion</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">categoria de gasto</a>
                                   
-                                    <a class="nav-link" href="tbltasaCambio.php">tasa de cambio</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arqueo caja</a>
     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -147,7 +147,7 @@ $par= new ArqueoCaja();
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblcomunidad.php">Comunidades</a>
-                                            <a class="nav-link" href="tblparroquia.php">parroquia</a>
+                                            <a class="nav-link" href="tblparroquia.php">Parroquia</a>
                                             <a class="nav-link" href="">kermesse</a>
                                         </nav>
                             </div>
