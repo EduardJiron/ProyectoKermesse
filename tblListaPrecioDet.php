@@ -195,7 +195,7 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar la lista de precio 
                                 Para crear un nuevo precio por favor de clic en el botón: 
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i>Nuevo precio</a>.
+                                <a target="_blank" href="agregarListaPrecioDet.php"><i class="fa-solid fa-user-plus"></i>Nuevo precio</a>.
                             </div>
                         </div>
                         <div class="card mb-4">
