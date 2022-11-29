@@ -237,7 +237,7 @@ if(isset($varMsj))
             <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
                 <i class="fa-solid fa-eye"></i>
             </a>&nbsp;
-            <a href="editarComunidad.php" target="_blank" title="Modificar los datos de la comunidad">
+            <a href="editarComunidad.php?editc=<?php echo $r->__GET('id_comunidad') ?>" target="_blank" title="Modificar los datos de la comunidad">
                 <i class="fa-solid fa-user-pen"></i>
             </a>&nbsp;
             <a href="#" target="_blank" title="Dar de baja a una comunidad">
@@ -302,6 +302,10 @@ $(document).ready(function ()
     if(mensaje == "1")
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+    if(mensaje == "2")
+    {
+        successAlert('Error', 'Los datos no se han guardado!');
     }
 
 

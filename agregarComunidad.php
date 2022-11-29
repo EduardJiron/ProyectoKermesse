@@ -172,6 +172,7 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
                                                         <input class="form-control" id="Nombre"name = "Nombre"
                                                         type="text" placeholder="Enter your first name" />
                                                         <label for="Nombre">Nombre</label>
@@ -200,18 +201,12 @@
                                             </div>
                                         </div>
                                             
-                                          
-                                          
-                                          
-                                               
                                                 
                                             
                                     
                                             
-                                            
-                                           
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblComunidad.php">Agregar Comunidad</a></div>
+                                                <input type="submit" class="btn btn-primary" value="Guardar">
                                             </div>
                                         </form>
                                     </div>
