@@ -43,7 +43,7 @@ if ($_POST)
                 $us->__SET('nombre', $_POST['Nombre']);
                 $us->__SET('responsable', $_POST['Responsable']);
                 $us->__SET('desc_contribucion', $_POST['Desc_contribucion']);
-                $us->__SET('estado', 1);
+                $us->__SET('estado', 2);
         
                 $dtu->editcomunidad($us);
                 //var_dump($emp);
@@ -63,6 +63,22 @@ if ($_POST)
 
 
     }
-
+   
        
+    }
+
+    if ($_GET) 
+    {
+        try 
+        {
+            
+            $us->__SET('id_comunidad', $_GET['delU']);
+            $dtu->deletecomunidad($us->__GET('id_comunidad'));
+            header("Location: ../tblcomunidad.php?msj=1") ;
+        }
+        catch(Exception $e)
+        {
+            header("Location: /HR/tbl_usuarios.php?msj=6");
+            die($e->getMessage());
+        }
     }

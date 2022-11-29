@@ -215,6 +215,13 @@ if(isset($varMsj))
     <?php
 
     foreach ($dt->listComunidad() as $r):
+        $estadoUser = "";
+        if($r->__GET('estado')==1 || $r->__GET('estado')==2){
+            $estadoUser = "Activo";
+        }
+        else{
+            $estadoUser = "Inactivo";
+        }
     ?>
 
     <tr>
@@ -229,7 +236,7 @@ if(isset($varMsj))
       
         <td>   <?php echo $r->__GET("responsable"); ?></td>
         <td>   <?php echo $r->__GET("desc_contribucion"); ?></td>
-        <td>   <?php echo $r->__GET("estado"); ?></td>
+        <td>   <?php echo $estadoUser; ?></td>
 
        
 
@@ -240,7 +247,7 @@ if(isset($varMsj))
             <a href="editarComunidad.php?editc=<?php echo $r->__GET('id_comunidad') ?>" target="_blank" title="Modificar los datos de la comunidad">
                 <i class="fa-solid fa-user-pen"></i>
             </a>&nbsp;
-            <a href="#" target="_blank" title="Dar de baja a una comunidad">
+            <a href="#" onclick="deletecomunidad('<?php echo $r->__GET('id_comunidad');  ?>');" title="Dar de baja al usuario">
                 <i class="fa-solid fa-user-minus"></i> 
             </a>
         </td>
@@ -251,7 +258,8 @@ endforeach;
 ?>
     </tr>
 </tbody>
-                                </table>
+</table>
+                                
                             </div>
                         </div>
                     </div>
@@ -292,6 +300,21 @@ endforeach;
 
 
 <script>
+    function deletecomunidad(a)
+  {
+    confirm(function(e,btn)
+      { //event + button clicked
+          e.preventDefault();
+          window.location.href = "./negocio/Ngcomidad.php?delU="+a;
+          //successAlert('Confirmed!');
+      }, 
+      function(e,btn)
+      {
+          e.preventDefault();
+          //errorAlert('Denied!');
+      });
+  }
+
 
 $(document).ready(function ()
 {
@@ -311,7 +334,12 @@ $(document).ready(function ()
 
 /////////// DATATABLE ///////////
 $(document).ready( function (){
-    
+        $('table.table').DataTable({
+        ajax: '../ajax/data/arrays.txt',
+        scrollY: 200,
+        scrollCollapse: true,
+        paging: false,
+    });
     $("#tbl_usuarios").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["excel", "pdf", "print"],
