@@ -46,6 +46,34 @@ class DtParroquia extends conexion
             }
     }
 
+    public function insertparro(Parroquia $com)
+    {
+            try
+            {
+                    $this->myCon= parent ::conectar();
+                    $querysql= "INSERT INTO dbkermesse.tbl_parroquia (nombre, direccion, telefono, parroco, logo ,sitio_web) VALUES (?,?,?,?,?,?)";
+
+                    $stm= $this->myCon->prepare($querysql);
+                    $stm->execute(array(
+                            $com->__GET('nombre'),
+                            $com->__GET('direccion'),
+                            $com->__GET('telefono'),
+                            $com->__GET('parroco'),
+                            $com->__GET('logo'),
+                            $com->__GET('sitio_web'),
+
+                       
+
+                    ));
+
+                    $this->myCon= parent ::desconectar();
+            }
+            catch(Exception $e)
+            {
+                    die($e->getMessage());
+            }
+    }
+
 
 
 }

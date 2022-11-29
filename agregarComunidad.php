@@ -211,7 +211,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblComunidad.php">Agregar Comunidad</a></div>
+                                            <input class="btn btn-primary" type="submit" value="Guardar"/>
                                             </div>
                                         </form>
                                     </div>

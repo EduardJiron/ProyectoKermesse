@@ -50,7 +50,7 @@ class DtComunidad extends conexion
             try
             {
                     $this->myCon= parent ::conectar();
-                    $querysql= "INSERT INTO dbkermess.tbl_comunidad (nombre, responsable, desc_contribucion, estado) VALUES (?,?,?,?)";
+                    $querysql= "INSERT INTO dbkermesse.tbl_comunidad (nombre, responsable, desc_contribucion, estado) VALUES (?,?,?,?)";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute(array(

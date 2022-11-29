@@ -44,6 +44,28 @@ class DtConBono extends conexion
             }
     }
 
+    public function insertBono(conBono $com)
+    {
+            try
+            {
+                    $this->myCon= parent ::conectar();
+                    $querysql= "INSERT INTO  dbkermesse.tbl_control_bonos (nombre, valor, estado) VALUES (?,?,?)";
+
+                    $stm= $this->myCon->prepare($querysql);
+                    $stm->execute(array(
+                            $com->__GET('nombre'),
+                            $com->__GET('valor'),
+                            $com->__GET('estado'),
+
+                    ));
+
+                    $this->myCon= parent ::desconectar();
+            }
+            catch(Exception $e)
+            {
+                    die($e->getMessage());
+            }
+    }
 
 
 }

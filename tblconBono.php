@@ -27,7 +27,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión Bono</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -78,10 +78,10 @@ if(isset($varMsj))
                     <div class="sb-sidenav-menu">
                     <div class="nav">
                                  
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">gestionar Bono</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Usuarios y roles
+                                        Bono
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     
@@ -185,11 +185,8 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los bonos activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
-<<<<<<< HEAD
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> bonos</a>.
-=======
-                                <a target="_blank" href="agregarBono.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
->>>>>>> 2b87b752d97914c5ab5f07eaf2b1b6e88796c8a8
+            <a target="_blank" href="agregarBono.php"><i class="fa-solid fa-user-plus"></i> Nuevo Bono</a>.
+
                             </div>
                         </div>
                         <div class="card mb-4">
