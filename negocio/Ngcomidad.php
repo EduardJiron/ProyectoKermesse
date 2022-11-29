@@ -43,7 +43,7 @@ if ($_POST)
                 $us->__SET('nombre', $_POST['Nombre']);
                 $us->__SET('responsable', $_POST['Responsable']);
                 $us->__SET('desc_contribucion', $_POST['Desc_contribucion']);
-                $us->__SET('estado', 1);
+                $us->__SET('estado', 2);
         
                 $dtu->editcomunidad($us);
                 //var_dump($emp);
