@@ -83,7 +83,7 @@ class DtComunidad extends conexion
                     $u = new Comunidad();
 
                     //_SET(CAMPOBD, atributoEntidad)			
-                    $u->__SET('id_comunidad', $r->id_rol);
+                    $u->__SET('id_comunidad', $r->id_comunidad);
                     $u->__SET('nombre', $r->nombre);
                     $u->__SET('responsable', $r->responsable);
                     $u->__SET('desc_contribucion', $r->desc_contribucion);
@@ -126,6 +126,28 @@ class DtComunidad extends conexion
                                     )
                             );
                             $this->myCon = parent::desconectar();
+            } 
+            catch (Exception $e) 
+            {
+                    var_dump($e);
+                    die($e->getMessage());
+            }
+    }
+
+    public function deletecomunidad($id)
+    {
+            try 
+            {
+                    $this->myCon = parent::conectar();
+                    $sql = "UPDATE webk.tbl_comunidad SET
+                                            estado = 3
+                                WHERE id_comunidad= ?";
+
+                    $stm = $this->myCon->prepare($sql);
+                    $stm->execute(array($id)
+                );
+
+                    $this->myCon = parent::desconectar();
             } 
             catch (Exception $e) 
             {

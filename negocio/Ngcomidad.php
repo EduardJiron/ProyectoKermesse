@@ -63,6 +63,22 @@ if ($_POST)
 
 
     }
-
+   
        
+    }
+
+    if ($_GET) 
+    {
+        try 
+        {
+            
+            $us->__SET('id_comunidad', $_GET['delU']);
+            $dtu->deletecomunidad($us->__GET('id_comunidad'));
+            header("Location: ../tblcomunidad.php?msj=1") ;
+        }
+        catch(Exception $e)
+        {
+            header("Location: /HR/tbl_usuarios.php?msj=6");
+            die($e->getMessage());
+        }
     }

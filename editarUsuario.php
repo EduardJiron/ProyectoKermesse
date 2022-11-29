@@ -8,6 +8,19 @@ include 'entidades/Usuario.php';
 $dt = new DtUsuario();
 $par= new Usuario();
 
+//variable de control msj
+$varIdU = 0;
+if(isset($varIdU))
+{ 
+  $varIdU = $_GET['editU']; //RECUPERAMOS EL VALOR DE NUESTRA VARIABLE PARA EDITAR EL USUARIO
+}
+
+//OBTENEMOS LOS DATOS DEL USUARIO PARA SER EDITADO
+$tu = $dt->getUserByID($varIdU);
+
+?>
+
+
 
 
 
@@ -165,40 +178,22 @@ $par= new Usuario();
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Usuario</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form method="POST" action="./negocio/Ngusuario.php">
+                                        <div class="row mb-3">
+                                              
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                      
-                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
-                                                    <option selected>Selecionar Usuario</option>
-                                                    
-                                                    <?php foreach ($dt->listUsuario() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("usuario"); ?></option>
-                                    
-                                   
-
-                                                    <?php
-                                                        endforeach;
-                                                        ?>
-                                                  
-                                                    </select>
-                                                    </div>
-                                                    <br>
-                                                </div>
-                                        <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input type="hidden" value="2" name="txt" id="txt"/>
+                                                    <input  value="<?php echo $varIdU ?>" class="form-control" id="id" name="id" type="hidden" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="usuario" name="usuario" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Usuario</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="pwd"  name="pwd" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Contraseña</label>
                                                     </div>
                                                 </div>
@@ -206,14 +201,14 @@ $par= new Usuario();
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <input class="form-control" id="nombre" name="nombre"  type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombres</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="apellido" name="apellido"  type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Apellidos</label>
                                                         <br>
                                                     </div>
@@ -222,7 +217,7 @@ $par= new Usuario();
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="email" name="email" type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Email</label>
                                                         <br>
                                                     </div>
@@ -234,7 +229,7 @@ $par= new Usuario();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblusuario.php">Editar Usuario</a></div>
+                                               <input type="submit" class="btn btn-primary btn-block" value="Guardar" name="btnGuardar" id="btnGuardar" />
                                             </div>
                                         </form>
                                     </div>
