@@ -210,14 +210,7 @@ $par= new Denominacion();
                                                         <label for="inputFirstName">Cantidad</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Precio Sugerido</label>
-                                                        <br>
-                                                    </div>
-                                                </div>                                                
+                                                                                           
                                             
                                             </div>
                                         </div>

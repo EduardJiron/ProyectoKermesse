@@ -4,6 +4,11 @@
 <?php
 
 
+include 'datos/DtMoneda.php';
+include 'entidades/moneda.php';
+
+$dt = new DtMoneda();
+$mon= new moneda();
 
 
 
@@ -37,9 +42,15 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
+            <div class="row mb-3">
+            <div class="form-floating mb-3 mb-md-0"> 
+           
+
+            <div class="input-group">
+
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+
                 </div>
             </form>
             <!-- Navbar-->
@@ -162,25 +173,40 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Agregar Denominación</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="./negocio/NgDenominacion.php" method="POST">
+
+                                        <select id = "valor_moneda" name = "valor_moneda"   class="form-select" >
+                                                    <option selected>Seleccionar Moneda</option>
+                                                    
+                                                    <?php foreach ($dt->listMoneda() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("id_moneda"); ?></option>
+                                    
+                                   
+
+                                                    <?php
+                                                        endforeach;
+                                                        ?>
+                                                  
+                                                    </select>
+
+            </div>
+            </div>
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="valor" name = "Valor" type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="valor" name = "valor" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Valor</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="valor_letras" type="Valor en letras" placeholder="Contraseña" />
-                                                        <label for="inputFirstName">Valor en Letras</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                           
-                                        </div>  
-                                          
+                                                    <input class="form-control" id="valor_letras" name = "valor_letras" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Valor en letras</label>
+                                                     </div>
+                                                        
                                           
                                           
                                                
@@ -191,8 +217,9 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblDenominacion.php">Agregar Denominación</a></div>
+                                            <input class="btn btn-primary" type="submit" value="Guardar"/>
                                             </div>
+
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">

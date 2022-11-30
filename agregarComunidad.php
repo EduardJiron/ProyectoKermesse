@@ -3,12 +3,6 @@
 
 <?php
 
-
-
-
-
-
-
 ?>
 
 
@@ -206,6 +200,8 @@
                                     
                                             
                                             <div class="mt-4 mb-0">
+
+
                                                 <input type="submit" class="btn btn-primary" value="Guardar">
                                             </div>
                                         </form>

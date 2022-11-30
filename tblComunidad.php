@@ -24,7 +24,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión Comunidad</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -75,7 +75,7 @@ if(isset($varMsj))
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                                
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">gestionar Comunidad</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -184,7 +184,7 @@ if(isset($varMsj))
                             En esta pantalla se pueden visualizar y gestionar los datos de los comunidades activas/inactivas. 
                                 Para crear un nueva comunidad por favor de clic en el botón: 
 
-                                <a target="_blank" href="agregarComunidad.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="agregarComunidad.php"><i class="fa-solid fa-user-plus"></i> Nueva comunidad</a>.
 
                             </div>
                         </div>

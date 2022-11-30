@@ -32,7 +32,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión monedas</title>
+        <title>Gestión de monedas</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -51,7 +51,7 @@ if(isset($varMsj))
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="principal.php">kermesse</a>
+            <a class="navbar-brand ps-3" href="principal.php">Kermesse</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -86,7 +86,7 @@ if(isset($varMsj))
                     <div class="sb-sidenav-menu">
                     <div class="nav">
                                  
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">Gestionar usuario</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -97,14 +97,14 @@ if(isset($varMsj))
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblusuario.php">Usuarios</a>
-                                            <a class="nav-link" href="tblrol.php">rol</a>
-                                            <a class="nav-link" href="tblopciones.php">opciones</a>
-                                            <a class="nav-link" href="tblopciones.php">asignar rol</a>
+                                            <a class="nav-link" href="tblrol.php">Rol</a>
+                                            <a class="nav-link" href="tblopciones.php">Opciones</a>
+                                            <a class="nav-link" href="tblopciones.php">Asignar rol</a>
                                         </nav>
                                     </div>
                       
                            
-                            <div class="sb-sidenav-menu-heading">kermesse
+                            <div class="sb-sidenav-menu-heading">Kermesse
 
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -117,9 +117,9 @@ if(isset($varMsj))
                                     <a class="nav-link" href="tblproducto.php">Productos</a>
                                     
                                     <a class="nav-link" href="tblctgproducto.php">Categorias</a>
-                                    <a class="nav-link" href="tblListaPrecioDet.php">precios</a>
-                                    <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
-                                    <a class="nav-link" href="tblconBono.php">bonos</a>
+                                    <a class="nav-link" href="tblListaPrecioDet.php">Precios</a>
+                                    <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
+                                    <a class="nav-link" href="tblconBono.php">Bonos</a>
                                    
                                 </nav>
                             </div>
@@ -133,19 +133,19 @@ if(isset($varMsj))
                                     </a>
                                              
                                     <a class="nav-link" href="tblIngresoComunidad.php">Ingreso comunidad</a>
-                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
-                                    <a class="nav-link" href="tblListaPrecio.php">lista de precio</a>
-                                    <a class="nav-link" href="tblmoneda.php">moneda</a>
-                                    <a class="nav-link" href="tblgastos.php">gasto</a>
+                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Detalles de ingreso de comunidad</a>
+                                    <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
+                                    <a class="nav-link" href="tblmoneda.php">Moneda</a>
+                                    <a class="nav-link" href="tblgastos.php">Gasto</a>
 
-                                    <a class="nav-link" href="tblgastosdet.php">gasto det</a>
-                                      <a class="nav-link" href="tblconBono.php">bono</a>
+                                    <a class="nav-link" href="tblgastosdet.php">Detalle de gasto</a>
+                                      <a class="nav-link" href="tblconBono.php">Bono</a>
                                     <a class="nav-link" href="tblDenominacion.php">Denominacion</a>
-                                    <a class="nav-link" href="tblCategoriaGastos.php">categoria de gasto</a>
+                                    <a class="nav-link" href="tblCategoriaGastos.php">Categoria de gasto</a>
                                   
-                                    <a class="nav-link" href="tbltasaCambio.php">tasa de cambio</a>
+                                    <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arqueo de caja</a>
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
@@ -168,8 +168,8 @@ if(isset($varMsj))
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblcomunidad.php">Comunidades</a>
-                                            <a class="nav-link" href="tblparroquia.php">parroquia</a>
-                                            <a class="nav-link" href="">kermesse</a>
+                                            <a class="nav-link" href="tblparroquia.php">Parroquia</a>
+                                            <a class="nav-link" href="">Kermesse</a>
                                         </nav>
                             </div>
                         </div>
@@ -197,10 +197,10 @@ if(isset($varMsj))
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                En esta pantalla se pueden visualizar y gestionar los datos de las pagos de la monedas activos/inactivos. 
-                                Para gestinar por favor de clic en el botón: 
+                                En esta pantalla se pueden visualizar y gestionar los datos de las monedas 
+                               
 
-                                <a target="_blank" href="agregarMoneda.php"><i class="fa-solid fa-user-plus"></i> Nmonedas</a>.
+                                <a target="_blank" href="agregarMoneda.php"><i class="fa-solid fa-user-plus"></i> Nueva moneda</a>.
 
                             </div>
                         </div>
@@ -216,10 +216,11 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>id</th>
-                                            <th>nombre</th>
-                                            <th>simbolo</th>
-                                            <th>opciones</th>
+                                            <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Simbolo</th>
+                                            <th>Estado</th>
+                                            <th>Opciones</th>
                                            
                                         </tr>
                                     </thead>
@@ -228,6 +229,13 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listMoneda() as $r):
+                                            $estadoUser = "";
+                                            if ($r->__GET('estado') == 1 || $r->__GET('estado') == 2) {
+                                                $estadoUser = "Activo";
+                                            } else {
+                                                $estadoUser = "Inactivo";
+                                            }
+
                                         ?>
 
                                         <tr>
@@ -240,19 +248,21 @@ if(isset($varMsj))
                                             
                                         </td>
                                             <td>   <?php echo $r->__GET("simbolo"); ?>   </td>
+
+                                            <td> <?php echo $estadoUser ?></td>
                                       
                                             
                                             
 
                                             <td>
-                                                <a href="#" target="_blank" title="Visualizar los datos de un usuario">
+                                                <a href="#" target="_blank" title="Visualizar">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarMoneda.php" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarMoneda.php?editc=<?php echo $r->__GET('id_moneda') ?>" target="_blank" title="Modificar">
                                                     <i class="fa-solid fa-user-pen"></i>
-                                                </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
+                                                </a>&nbsp;                                                
+                                                <a href="#" onclick="deleteMoneda('<?php echo $r->__GET('id_moneda');  ?>');" title="Eliminar">
+                                                        <i class="fa-solid fa-user-minus"></i>
                                                 </a>
                                             </td>
                                             
@@ -305,6 +315,19 @@ endforeach;
 
 <script>
 
+
+function deleteMoneda(a) {
+            confirm(function(e, btn) { //event + button clicked
+                    e.preventDefault();
+                    window.location.href = "./negocio/NgMoneda.php?delU=" + a;
+                    //successAlert('Confirmed!');
+                },
+                function(e, btn) {
+                    e.preventDefault();
+                    //errorAlert('Denied!');
+                });
+        }
+
 $(document).ready(function ()
 {
     /////////// VARIABLE DE CONTROL MSJ ///////////
@@ -314,6 +337,11 @@ $(document).ready(function ()
     if(mensaje == "1")
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+
+    if(mensaje == "2")
+    {
+        successAlert('Éxito', 'Los datos han sido editados exitosamente!');
     }
 
 

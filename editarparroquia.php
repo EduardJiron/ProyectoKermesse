@@ -9,6 +9,14 @@ $dt = new DtParroquia();
 $par= new Parroquia();
 
 
+$varIdU = 0;
+if(isset($varIdU))
+{ 
+    $varIdU = $_GET['editc']; 
+}
+
+$par = $dt->getcomrByID($varIdU);
+
 
 
 
@@ -64,7 +72,7 @@ $par= new Parroquia();
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                                  
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">Gestionar usuario</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -165,40 +173,21 @@ $par= new Parroquia();
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar parroquia</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="./negocio/NgParroquia.php" method="POST">
+            
                                         <div class="row mb-3">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6"> 
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                      
-                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
-                                                    <option selected>Selecionar parroquia</option>
-                                                    
-                                                    <?php foreach ($dt->listparroquia() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("nombre"); ?></option>
-                                    
-                                   
-
-                                                    <?php
-                                                        endforeach;
-                                                        ?>
-                                                  
-                                                    </select>
-                                                    </div>
-                                                    <br>
-                                                </div>
-                                        <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <input  value="<?php echo $varIdU ?>" class="form-control" id="id" name="id" type="hidden" placeholder="Enter your first name" />
+                                                        <input type="hidden" value="2" name="txt" id="txt"/>
+                                                    <input class="form-control"  id="nombre" name ="nombre" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="direccion" name ="direccion" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">direccion</label>
                                                     </div>
                                                 </div>
@@ -206,14 +195,14 @@ $par= new Parroquia();
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <input class="form-control"  id="telefono" name = "telefono" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Telefono</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="parroco" name = "parroco"  type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Parroco</label>
                                                         <br>
                                                     </div>
@@ -222,14 +211,12 @@ $par= new Parroquia();
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
+                                                        
                                                     <h4 class="text-center">Seleccione imagen de logo</h4>
                                                     <div class="form-floating">
-         
-                                                  
-        
+   
         </div>
-                                                    </div>
-                                                </div>
+
 
                                                 <div class="col-md-6">
                                                     
@@ -252,23 +239,17 @@ $par= new Parroquia();
                                             <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="sitio_web"name = "sitio_web" type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">sitio web</label>
                                                         <br>
                                                     </div>
                                                 </div>
                                             </div>
-                                          
-                                          
-                                               
-                                                
+                                 
                                             
-                                    
-                                            
-                                            
-                                           
+                                            <div class="form-floating mb-3" style="width: 510px; left: 15px;">
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar parroquia </a></div>
+                                            <input type="submit" class="btn btn-primary btn-block" value="Guardar" />
                                             </div>
                                         </form>
                                     </div>

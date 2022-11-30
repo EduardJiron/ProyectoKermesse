@@ -14,8 +14,9 @@ if ($_POST)
             {
                 //CONSTRUIMOS EL OBJETO
                 //ATRIBUTO ENTIDAD //NAME DEL CONTROL
-                $us->__SET('valor', $_POST['Valor']);
-                $us->__SET('valor_letras', $_POST['Valor en letras']);
+                $us->__SET('id_Moneda', 1);
+                $us->__SET('valor', $_POST['valor']);
+                $us->__SET('valor_letras', $_POST['valor_letras']);
                 $us->__SET('estado', 1);
                 $dtu-> insertDenominacion($us);
                 //var_dump($emp);
@@ -27,3 +28,4 @@ if ($_POST)
                 die($e->getMessage());
             }
     }
+    
