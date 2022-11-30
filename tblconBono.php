@@ -5,7 +5,7 @@ include 'datos/DtConBono.php';
 include 'entidades/conBono.php';
 
 $dt = new DtConBono();
-$bon= new conBono();
+$par= new conBono();
 
 
 
@@ -20,14 +20,14 @@ if(isset($varMsj))
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="esp">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión Bono</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -78,10 +78,10 @@ if(isset($varMsj))
                     <div class="sb-sidenav-menu">
                     <div class="nav">
                                  
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">gestionar Bono</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Usuarios y roles
+                                        Bono
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     
@@ -185,11 +185,8 @@ if(isset($varMsj))
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar los datos de los bonos activos/inactivos. 
                                 Para crear un nuevo usuario por favor de clic en el botón: 
-<<<<<<< HEAD
-                                <a target="_blank" href="newUsuario.php"><i class="fa-solid fa-user-plus"></i> bonos</a>.
-=======
-                                <a target="_blank" href="agregarBono.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
->>>>>>> 2b87b752d97914c5ab5f07eaf2b1b6e88796c8a8
+            <a target="_blank" href="agregarBono.php"><i class="fa-solid fa-user-plus"></i> Nuevo Bono</a>.
+
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -207,6 +204,7 @@ if(isset($varMsj))
                                             <th>id</th>
                                             <th>nombre</th>
                                             <th>valor</th>
+                                            <th>estado</th>
                                             <th>opciones</th>
                                             
                                         </tr>
@@ -216,6 +214,12 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listBono() as $r):
+                                            $estadoUser = "";
+                                            if ($r->__GET('estado') == 1 || $r->__GET('estado') == 2) {
+                                                $estadoUser = "Activo";
+                                            } else {
+                                                $estadoUser = "Inactivo";
+                                            }
                                         ?>
 
                                         <tr>
@@ -229,17 +233,17 @@ if(isset($varMsj))
                                         </td>
                                             <td>   <?php echo $r->__GET("valor"); ?>   </td>
                                           
-                                           
+                                            <td> <?php echo $estadoUser ?></td>
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarBono.php" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
+                                                <a href="editarBono.php?editc=<?php echo $r->__GET('id_bono') ?>" target="_blank" title="Modificar ">
+                                                <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
+                                                <a href="#" onclick="deleBono('<?php echo $r->__GET('id_bono');  ?>');" title="Dar de baja Bono">
+                                                    <i class="fa-solid fa-user-minus"></i>
                                                 </a>
                                             </td>
                                             
@@ -291,6 +295,20 @@ endforeach;
 
 
 <script>
+function deleBono(a)
+  {
+    confirm(function(e,btn)
+      { //event + button clicked
+          e.preventDefault();
+          window.location.href = "./negocio/NgControlBono.php?delU="+a;
+          //successAlert('Confirmed!');
+      }, 
+      function(e,btn)
+      {
+          e.preventDefault();
+          //errorAlert('Denied!');
+      });
+  }
 
 $(document).ready(function ()
 {
@@ -301,6 +319,14 @@ $(document).ready(function ()
     if(mensaje == "1")
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+    if(mensaje == "2")
+    {
+        successAlert('Éxito', 'Los datos han sido modificados exitosamente!');
+    }
+    if(mensaje == "3")
+    {
+        successAlert('Éxito', 'Los datos han sido eliminados exitosamente!');
     }
 
 

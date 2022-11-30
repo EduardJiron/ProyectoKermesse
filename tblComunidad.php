@@ -24,7 +24,7 @@ if(isset($varMsj))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gestión Usuarios</title>
+        <title>Gestión Comunidad</title>
         <!--<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
         <!-- Plantilla -->
        
@@ -75,7 +75,7 @@ if(isset($varMsj))
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                                
-                        <div class="sb-sidenav-menu-heading">gestionar usuario</div>
+                        <div class="sb-sidenav-menu-heading">gestionar Comunidad</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -184,7 +184,7 @@ if(isset($varMsj))
                             En esta pantalla se pueden visualizar y gestionar los datos de los comunidades activas/inactivas. 
                                 Para crear un nueva comunidad por favor de clic en el botón: 
 
-                                <a target="_blank" href="agregarComunidad.php"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>.
+                                <a target="_blank" href="agregarComunidad.php"><i class="fa-solid fa-user-plus"></i> Nueva comunidad</a>.
 
                             </div>
                         </div>
@@ -215,6 +215,13 @@ if(isset($varMsj))
     <?php
 
     foreach ($dt->listComunidad() as $r):
+        $estadoUser = "";
+        if($r->__GET('estado')==1 || $r->__GET('estado')==2){
+            $estadoUser = "Activo";
+        }
+        else{
+            $estadoUser = "Inactivo";
+        }
     ?>
 
     <tr>
@@ -229,7 +236,7 @@ if(isset($varMsj))
       
         <td>   <?php echo $r->__GET("responsable"); ?></td>
         <td>   <?php echo $r->__GET("desc_contribucion"); ?></td>
-        <td>   <?php echo $r->__GET("estado"); ?></td>
+        <td>   <?php echo $estadoUser; ?></td>
 
        
 
@@ -237,10 +244,10 @@ if(isset($varMsj))
             <a href="#" target="_blank" title="Visualizar los datos de la comunidad">
                 <i class="fa-solid fa-eye"></i>
             </a>&nbsp;
-            <a href="editarComunidad.php" target="_blank" title="Modificar los datos de la comunidad">
+            <a href="editarComunidad.php?editc=<?php echo $r->__GET('id_comunidad') ?>" target="_blank" title="Modificar los datos de la comunidad">
                 <i class="fa-solid fa-user-pen"></i>
             </a>&nbsp;
-            <a href="#" target="_blank" title="Dar de baja a una comunidad">
+            <a href="#" onclick="deletecomunidad('<?php echo $r->__GET('id_comunidad');  ?>');" title="Dar de baja al usuario">
                 <i class="fa-solid fa-user-minus"></i> 
             </a>
         </td>
@@ -251,7 +258,8 @@ endforeach;
 ?>
     </tr>
 </tbody>
-                                </table>
+</table>
+                                
                             </div>
                         </div>
                     </div>
@@ -292,6 +300,21 @@ endforeach;
 
 
 <script>
+    function deletecomunidad(a)
+  {
+    confirm(function(e,btn)
+      { //event + button clicked
+          e.preventDefault();
+          window.location.href = "./negocio/Ngcomidad.php?delU="+a;
+          //successAlert('Confirmed!');
+      }, 
+      function(e,btn)
+      {
+          e.preventDefault();
+          //errorAlert('Denied!');
+      });
+  }
+
 
 $(document).ready(function ()
 {
@@ -303,11 +326,20 @@ $(document).ready(function ()
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
     }
+    if(mensaje == "2")
+    {
+        successAlert('Error', 'Los datos no se han guardado!');
+    }
 
 
 /////////// DATATABLE ///////////
 $(document).ready( function (){
-    
+        $('table.table').DataTable({
+        ajax: '../ajax/data/arrays.txt',
+        scrollY: 200,
+        scrollCollapse: true,
+        paging: false,
+    });
     $("#tbl_usuarios").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["excel", "pdf", "print"],

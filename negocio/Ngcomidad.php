@@ -8,6 +8,12 @@ $dtu = new DtComunidad ();
 
 if ($_POST) 
 {
+    
+    $txt= $_POST["txt"];
+
+    switch($txt){
+
+        case 1:{
             try 
             {
                 //CONSTRUIMOS EL OBJETO
@@ -22,7 +28,57 @@ if ($_POST)
             } 
             catch (Exception $e) 
             {
-                header("Location: finalweb/tblcomunidad?msj=1");
+                header("Location: ../tblcomunidad?msj=1");
                 die($e->getMessage());
             }
+            break;
+        }
+
+        case 2:{
+            try 
+            {
+                //CONSTRUIMOS EL OBJETO
+                //ATRIBUTO ENTIDAD //NAME DEL CONTROL}
+                $us->__SET('id_comunidad', $_POST['id']);
+                $us->__SET('nombre', $_POST['Nombre']);
+                $us->__SET('responsable', $_POST['Responsable']);
+                $us->__SET('desc_contribucion', $_POST['Desc_contribucion']);
+                $us->__SET('estado', 2);
+        
+                $dtu->editcomunidad($us);
+                //var_dump($emp);
+
+                header("Location: ../tblcomunidad.php?msj=1") ;
+              
+            } 
+            catch (Exception $e) 
+            {
+              
+                die($e->getMessage());
+            }
+            break;
+
+
+        }
+
+
+    }
+   
+       
+    }
+
+    if ($_GET) 
+    {
+        try 
+        {
+            
+            $us->__SET('id_comunidad', $_GET['delU']);
+            $dtu->deletecomunidad($us->__GET('id_comunidad'));
+            header("Location: ../tblcomunidad.php?msj=1") ;
+        }
+        catch(Exception $e)
+        {
+            header("Location: /HR/tbl_usuarios.php?msj=6");
+            die($e->getMessage());
+        }
     }

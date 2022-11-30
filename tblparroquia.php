@@ -210,6 +210,7 @@ if(isset($varMsj))
                                             <th>parroco</th>
                                             <th>logo</th>
                                             <th>sitio web</th>
+                                            <th>estado</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </thead>
@@ -218,6 +219,13 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listParroquia() as $r):
+                                            $estadoUser = "";
+                                            if ($r->__GET('estado') == 1 || $r->__GET('estado') == 2) {
+                                                $estadoUser = "Activo";
+                                            } else {
+                                                $estadoUser = "Inactivo";
+                                            }
+
                                         ?>
 
                                         <tr>
@@ -234,17 +242,18 @@ if(isset($varMsj))
                                             <td>   <?php echo $r->__GET("parroco"); ?></td>
                                             <td>   <?php echo $r->__GET("logo"); ?></td>
                                             <td>   <?php echo $r->__GET("sitio_web"); ?></td>
-                                            
+
+                                            <td> <?php echo $estadoUser ?></td>
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarparroquia.php" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
+                                                <a href="editarParroquia.php?editc=<?php echo $r->__GET('idParroquia') ?>" target="_blank" title="Modificar los datos de la parroquia">
+                                                <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
+                                                <a href="#" onclick=" deletparro('<?php echo $r->__GET('idParroquia');  ?>');" title="Dar de baja parroquia">
+                                                        <i class="fa-solid fa-user-minus"></i>
                                                 </a>
                                             </td>
                                             
@@ -296,7 +305,17 @@ endforeach;
 
 
 <script>
-
+function deletparro(a) {
+            confirm(function(e, btn) { //event + button clicked
+                    e.preventDefault();
+                    window.location.href = "./negocio/NgParroquia.php?delU=" + a;
+                    //successAlert('Confirmed!');
+                },
+                function(e, btn) {
+                    e.preventDefault();
+                    //errorAlert('Denied!');
+                });
+        }
 $(document).ready(function ()
 {
     /////////// VARIABLE DE CONTROL MSJ ///////////
@@ -306,6 +325,14 @@ $(document).ready(function ()
     if(mensaje == "1")
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+    if(mensaje == "2")
+    {
+        successAlert('Éxito', 'Los datos han sido modificados exitosamente!');
+    }
+    if(mensaje == "3")
+    {
+        successAlert('Éxito', 'Los datos han sido eliminados exitosamente!');
     }
 
 

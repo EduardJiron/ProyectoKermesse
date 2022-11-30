@@ -8,7 +8,7 @@ private $nombres;
 private $apellidos;
 private $email;
 private $pwd;
-private $estado=1;
+private $estado;
 
 
 public function __GET($k){return $this->$k;}

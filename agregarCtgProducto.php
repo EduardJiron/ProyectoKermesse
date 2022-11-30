@@ -40,8 +40,19 @@
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+
+
                 </div>
+
+                
+
             </form>
+
+            
+
+
+
+
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
@@ -162,37 +173,30 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Categoría del Producto</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="./negocio/NgCategoriaProducto.php" method="POST">
+
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
+                                                    <input class="form-control" id="Nombre" name="Nombre" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Contraseña" />
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
+                                                    <input class="form-control" id="descripcion" name="descripcion" type="text" placeholder="Contraseña" />
                                                         <label for="inputFirstName">Descripción</label>
                                                     </div>
                                                 </div>
                                             </div>
                                            
                                         </div>
-                                            
-                                          
-                                          
-                                          
-                                               
-                                                
-                                            
-                                    
-                                            
-                                            
-                                           
+
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblctgproducto.php">Agregar Categoría</a></div>
+                                            <input class="btn btn-primary" type="submit" value="Guardar"/>
                                             </div>
                                         </form>
                                     </div>

@@ -2,21 +2,14 @@
 
 
 <?php
-include 'datos/DtConBono.php';
-include 'entidades/conBono.php';
+include 'datos/DtListaPrecio.php';
+include 'entidades/lista_precio.php';
 
-$dt = new DtConBono();
-$par= new conBono();
+$dt = new DtListaPrecio();
+$par= new lista_precio();
 
 
 
-$varIdU = 0;
-if(isset($varIdU))
-{ 
-    $varIdU = $_GET['editc']; 
-}
-
-$par = $dt->getcomrByID($varIdU);
 
 
 ?>
@@ -70,8 +63,8 @@ $par = $dt->getcomrByID($varIdU);
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                               
-                        <div class="sb-sidenav-menu-heading">   Gestionar usuario</div>
+                                  
+                        <div class="sb-sidenav-menu-heading">Gestionar usuario</div>
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Usuarios y roles
@@ -83,7 +76,7 @@ $par = $dt->getcomrByID($varIdU);
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="tblusuario.php">Usuarios</a>
                                             <a class="nav-link" href="tblrol.php">Rol</a>
-                                            <a class="nav-link" href="tblopciones.php">Opciones</a>
+                                            <a class="nav-link" href="tblopciones.php">opciones</a>
                                             <a class="nav-link" href="tblopciones.php">Asignar rol</a>
                                         </nav>
                                     </div>
@@ -118,19 +111,19 @@ $par = $dt->getcomrByID($varIdU);
                                     </a>
                                              
                                        <a class="nav-link" href="tblIngresoComunidad.php">Ingreso comunidad</a>
-                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Detalle de ingresos comunidad</a>
+                                    <a class="nav-link" href="tblIngresoComunidadDet.php">Ingresos comunidad det</a>
                                     <a class="nav-link" href="tblListaPrecio.php">Lista de precio</a>
                                     <a class="nav-link" href="tblmoneda.php">Moneda</a>
                                     <a class="nav-link" href="tblgastos.php">Gasto</a>
 
-                                    <a class="nav-link" href="tblgastosdet.php">Gasto det</a>
+                                    <a class="nav-link" href="tblgastosdet.php">Detalle de datos</a>
                                       <a class="nav-link" href="tblconBono.php">Bono</a>
                                     <a class="nav-link" href="tblDenominacion.php">Denominacion</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Categoria de gasto</a>
                                   
                                     <a class="nav-link" href="tbltasaCambio.php">Tasa de cambio</a>
                                     <a class="nav-link" href="tblCategoriaGastos.php">Arqueo de caja</a>
-                                    <a class="nav-link" href="tblArqueoCajaDet.php">Detalle de arqueo caja</a>
+                                    <a class="nav-link" href="tblArqueoCajaDet.php">Arqueo de caja det</a>
     
     
                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -170,34 +163,56 @@ $par = $dt->getcomrByID($varIdU);
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Bono</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Lista Precio</h3></div>
                                     <div class="card-body">
-                                        <form action="./negocio/NgControlBono.php" method="POST">
-                                           
+                                        <form>
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                     <input  value="<?php echo $varIdU ?>" class="form-control" id="id" name="id" type="hidden" placeholder="Enter your first name" />
-                                                        <input type="hidden" value="2" name="txt" id="txt"/>
-                
-                                                    <input class="form-control" id="Nombre" name ="Nombre" type="text" placeholder="Enter your first name" />
+                                                      
+                                                  
+                                                    <?php foreach ($dt->listListaPrecio() as $r):
+                                                    ?>
+                                   
+                                        <option value="2"><?php echo $r->__GET("nombre"); ?></option>
+                                    
+                                   
+
+                                                    <?php
+                                                        endforeach;
+                                                        ?>
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                                
+                                        <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                    
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                    <input class="form-control" id="valor" name ="valor"type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Valor</label>
-                                                    </div>
-                                                </div>
+
                                             </div>
-                                           
+
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Descripción</label>
+                                                    </div>
+                                                                                                </div>                                           
+
+                                            </div>
+
+
                                         </div>
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                            <input type="submit" class="btn btn-primary btn-block" value="Guardar" />
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblListaPrecio.php">Editar Lista</a></div>
                                             </div>
                                         </form>
                                     </div>

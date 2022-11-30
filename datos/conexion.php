@@ -16,7 +16,12 @@ class Conexion
         $serverName = 'localhost';
         $dbName = 'dbkermesse';
         $userName = 'root';
+<<<<<<< HEAD
         $pwd = 'Usuario123.';
+=======
+
+        $pwd = 'Temporal2022++';
+>>>>>>> 550aadb5b0cba5aa45cb7f566216738277a928a0
 
 
        

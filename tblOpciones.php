@@ -188,7 +188,7 @@ if(isset($varMsj))
                         <div class="card mb-4">
                             <div class="card-body">
                                 En esta pantalla se pueden visualizar y gestionar las opciones de los usuarios activos/inactivos. 
-                                <a target="_blank" href="agregarOpciones.php"><i class="fa-solid fa-wrench"></i> Opciones</a>.
+                                <a target="_blank" href="agregarOpciones.php"><i class="fa-solid fa-wrench"></i> Agregar Opciones</a>.
                                 
                             </div>
                         </div>
@@ -228,13 +228,13 @@ if(isset($varMsj))
                                             
 
                                             <td>
-                                                <a href="#" target="_blank" title="Visualizar los datos de un usuario">
+                                                <a href="#" target="_blank" title="Visualizar los datos de la opción">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarOpciones.php" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
+                                                <a href="editarOpciones.php?editc=<?php echo $r->__GET('id_opciones') ?>" target="_blank" title="Modificar los datos de Opciones">
+                                                <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
+                                                <a href="#" target="_blank" title="Eliminar Opcion">
                                                     <i class="fa-solid fa-user-minus"></i> 
                                                 </a>
                                             </td>
