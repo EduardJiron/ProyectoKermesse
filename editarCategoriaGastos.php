@@ -8,6 +8,13 @@ include 'entidades/CategoriaGastos.php';
 $dt = new DtCategoriaGastos();
 $par= new CategoriaGastos();
 
+$varIdU = 0;
+if(isset($varIdU))
+{ 
+    $varIdU = $_GET['editc']; 
+}
+
+$par = $dt->getCategoriaGastosByID($varIdU);
 
 
 
@@ -165,40 +172,23 @@ $par= new CategoriaGastos();
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Categoría de Gastos</h3></div>
                                     <div class="card-body">
-                                        <form>
-                                        <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                      
-                                                    <select class="form-select"  style ="width: 95%;"aria-label="Default select example">
-                                                    <option selected>Selecionar Categoría de Gastos</option>
-                                                    
-                                                    <?php foreach ($dt->listCategoriaGastos() as $r):
-                                                    ?>
-                                   
-                                        <option value="2"><?php echo $r->__GET("nombre_categoria"); ?></option>
-                                    
-                                   
+                                        <form action="./negocio/NgCategoriaGastos.php" method="POST">                         
 
-                                                    <?php
-                                                        endforeach;
-                                                        ?>
-                                                  
-                                                    </select>
-                                                    </div>
-                                                    <br>
-                                                </div>
+
+
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input  value="<?php echo $varIdU ?>" class="form-control" id="id" name="id" type="hidden" placeholder="Enter your first name" />
+                                                        <input type="hidden" value="2" name="txt" id="txt"/>
+                                                    <input class="form-control" id="nombre_categoria" name = "nombre_categoria" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="descripcion" name = "descripcion" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Descripción</label>
                                                     </div>
                                                 </div>
@@ -208,7 +198,7 @@ $par= new CategoriaGastos();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblCategoriaGastos.php">Editar Categoría</a></div>
+                                            <input type="submit" class="btn btn-primary btn-block" value="Guardar" />
                                             </div>
                                         </form>
                                     </div>

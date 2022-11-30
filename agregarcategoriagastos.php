@@ -180,7 +180,7 @@ $pro= new Producto();
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Ingresar categoria de gasto</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="./negocio/NgCategoriaGastos.php" method="POST">
 
                                             <div class="row mb-3">
 
@@ -188,7 +188,8 @@ $pro= new Producto();
 
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
+                                                        <input class="form-control" id="nombre_categoria" name = "nombre_categoria" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                     </div>
                                                 </div>
@@ -199,7 +200,7 @@ $pro= new Producto();
 
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="descripcion" name = "descripcion" type="descripcion" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Descripción</label>
                                                     </div>
                                                 </div>
@@ -222,7 +223,7 @@ $pro= new Producto();
                                                 </div>
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblCategoriaGastos.php">Agregar categoria</a></div>
+                                            <input class="btn btn-primary" type="submit" value="Guardar"/>
                                             </div>
                                         </form>
                                     </div>

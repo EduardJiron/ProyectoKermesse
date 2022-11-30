@@ -47,11 +47,12 @@ class DtDenominacion extends conexion
 		try 
 		{
 			$this->myCon = parent::conectar();
-			$sql = "INSERT INTO dbkermesse.tbl_denominacion (valor,valor_letras,estado) 
-		        VALUES (?,?,?)";
+			$sql = "INSERT INTO dbkermesse.tbl_denominacion (idMoneda, valor,valor_letras,estado) 
+		        VALUES (?,?,?,?)";
 
 			$this->myCon->prepare($sql)
 		     ->execute(array(
+                        $dt->__GET('id_Moneda'),
 			 $dt->__GET('valor'),
 			 $dt->__GET('valor_letras'),			
 			 $dt->__GET('estado')));
