@@ -217,6 +217,7 @@ if(isset($varMsj))
                                             <th>Nombre</th>
                                             <th>apellido</th>
                                             <th>email</th>
+                                            <th>estado</th>
                                            
                                             <th>Opciones</th>
                                         </tr>
@@ -226,6 +227,13 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listUsuario() as $r):
+                                            $estadoUser = "";
+                                            if($r->__GET('estado')==1 || $r->__GET('estado')==2){
+                                                $estadoUser = "Activo";
+                                            }
+                                            else{
+                                                $estadoUser = "Inactivo";
+                                            }
                                         ?>
 
                                         <tr>
@@ -240,15 +248,16 @@ if(isset($varMsj))
                                             <td>   <?php echo $r->__GET("nombres"); ?>   </td>
                                             <td>   <?php echo $r->__GET("apellidos"); ?></td>
                                             <td>   <?php echo $r->__GET("email"); ?></td>
+                                            <td>   <?php echo $estadoUser; ?></td>
                                       
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarUsuario.php" target="_blank" title="Modificar los datos de un usuario">
+                                                <a href="editarUsuario.php?editU=<?php echo $r->__GET('id_usuario');  ?>" target="_blank" title="Modificar los datos de un usuario">
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
+                                                <a href="#" onclick="deleteuser('<?php echo $r->__GET('id_usuario');  ?>');" title="Dar de baja al usuario">
                                                     <i class="fa-solid fa-user-minus"></i> 
                                                 </a>
                                             </td>
@@ -301,6 +310,22 @@ endforeach;
 
 
 <script>
+
+function deleteuser(a)
+  {
+    confirm(function(e,btn)
+      { //event + button clicked
+          e.preventDefault();
+          window.location.href = "./negocio/Ngusuario.php?delU="+a;
+          //successAlert('Confirmed!');
+      }, 
+      function(e,btn)
+      {
+          e.preventDefault();
+          //errorAlert('Denied!');
+      });
+  }
+
 
 $(document).ready(function ()
 {

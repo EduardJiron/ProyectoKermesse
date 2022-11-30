@@ -162,18 +162,19 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Agreagar Usuario</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form method="POST" action="./negocio/Ngusuario.php" >
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
+                                                    <input class="form-control" id="usuario" name="usuario" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Usuario</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                    <input class="form-control" id="inputFirstName" type="password" placeholder="Contraseña" />
+                                                    <input class="form-control" id="pwd" name="pwd" type="password" placeholder="Contraseña" />
                                                         <label for="inputFirstName">Contraseña</label>
                                                     </div>
                                                 </div>
@@ -181,14 +182,14 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">Nombres</label>
+                                                        <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">Nombre</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="apellido" name="apellido" type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Apellidos</label>
                                                         <br>
                                                     </div>
@@ -197,7 +198,7 @@
                                                 <div class="col-md-6">
                                                     
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" id="email" name="email" type="text" placeholder="Enter your last name" />
                                                         <label for="inputLastName">Email</label>
                                                         <br>
                                                     </div>
@@ -218,7 +219,7 @@
                                             
                                            
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblUsuario.php">Agregar Usuario</a></div>
+                                               <input   type="submit" class="btn btn-primary" value="Guardar" />
                                             </div>
                                         </form>
                                     </div>

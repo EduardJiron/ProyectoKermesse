@@ -237,8 +237,8 @@ if(isset($varMsj))
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarCtgProducto.php" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
+                                                <a href="editarCtgProducto.php?editc=<?php echo $r->__GET('id_categoria_producto') ?>" target="_blank" title="Modificar los datos de Opciones">
+                                                <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
                                                 <a href="#" target="_blank" title="Dar de baja al usuario">
                                                     <i class="fa-solid fa-user-minus"></i> 
