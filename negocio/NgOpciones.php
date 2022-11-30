@@ -59,3 +59,19 @@ if ($_POST)
 
 
     }
+
+    if ($_GET) 
+    {
+        try 
+        {
+            
+            $us->__SET('id_opciones', $_GET['delU']);
+            $dtu->deleteuser($us->__GET('id_opciones'));
+            header("Location: ../tblOpciones.php?msj=1") ;
+        }
+        catch(Exception $e)
+        {
+            header("Location: /finalweb/tblOpciones.php?msj=6");
+            die($e->getMessage());
+        }
+    }

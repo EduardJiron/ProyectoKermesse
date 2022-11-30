@@ -107,6 +107,28 @@ class DtOpciones extends conexion
                         die($e->getMessage());
                 }
         }
+
+        public function deleteuser($id)
+        {
+                try 
+                {
+                        $this->myCon = parent::conectar();
+                        $sql = "UPDATE dbkermesse.tbl_opciones SET
+                                                estado = 3
+                                    WHERE id_opciones= ?";
+    
+                        $stm = $this->myCon->prepare($sql);
+                        $stm->execute(array($id)
+                    );
+    
+                        $this->myCon = parent::desconectar();
+                } 
+                catch (Exception $e) 
+                {
+                        var_dump($e);
+                        die($e->getMessage());
+                }
+        }
 }
 
 

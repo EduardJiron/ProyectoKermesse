@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <?php
 
 include 'datos/Dtctgproducto.php';
@@ -204,10 +198,11 @@ if(isset($varMsj))
                               
                                     <thead>
                                         <tr>
-                                            <th>id</th>
-                                            <th>nombre</th>
-                                            <th>descripcion</th>
-                                            <th>opciones</th>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Descripcion</th>
+                                            <th>Estado</th>
+                                            <th>Opciones</th>
                                             
                                            
                                         </tr>
@@ -217,6 +212,13 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listctgproducto() as $r):
+
+                                            $estadoUser = "";
+                                            if ($r->__GET('estado') == 1 || $r->__GET('estado') == 2) {
+                                                $estadoUser = "Activo";
+                                            } else {
+                                                $estadoUser = "Inactivo";
+                                            }
                                         ?>
 
                                         <tr>
@@ -229,6 +231,8 @@ if(isset($varMsj))
                                             
                                         </td>
                                             <td>   <?php echo $r->__GET("descripcion"); ?>   </td>
+
+                                            <td> <?php echo $estadoUser ?></td>
                                            
                                             
                                             
@@ -240,8 +244,8 @@ if(isset($varMsj))
                                                 <a href="editarCtgProducto.php?editc=<?php echo $r->__GET('id_categoria_producto') ?>" target="_blank" title="Modificar los datos de Opciones">
                                                 <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
+                                                <a href="#" onclick="deletectgproducto('<?php echo $r->__GET('id_categoria_producto');  ?>');" title="Dar de baja al usuario">
+                                                        <i class="fa-solid fa-user-minus"></i>
                                                 </a>
                                             </td>
                                             
@@ -293,6 +297,20 @@ endforeach;
 
 
 <script>
+
+function deletectgproducto(a) {
+            confirm(function(e, btn) { //event + button clicked
+                    e.preventDefault();
+                    window.location.href = "./negocio/NgCategoriaProducto.php?delU=" + a;
+                    //successAlert('Confirmed!');
+                },
+                function(e, btn) {
+                    e.preventDefault();
+                    //errorAlert('Denied!');
+                });
+        }
+
+
 
 $(document).ready(function ()
 {

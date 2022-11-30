@@ -1,6 +1,3 @@
-
-
-
 <?php
 include 'datos/DtUsuario.php';
 include 'entidades/Usuario.php';

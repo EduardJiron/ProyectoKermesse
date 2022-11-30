@@ -111,4 +111,26 @@ class Dtctgproducto extends conexion
                         die($e->getMessage());
                 }
         }
+
+        public function deletectgproducto($id)
+        {
+                try 
+                {
+                        $this->myCon = parent::conectar();
+                        $sql = "UPDATE dbkermesse.tbl_categoria_producto SET
+                                                estado = 3
+                                    WHERE id_categoria_producto= ?";
+    
+                        $stm = $this->myCon->prepare($sql);
+                        $stm->execute(array($id)
+                    );
+    
+                        $this->myCon = parent::desconectar();
+                } 
+                catch (Exception $e) 
+                {
+                        var_dump($e);
+                        die($e->getMessage());
+                }
+        }
 }

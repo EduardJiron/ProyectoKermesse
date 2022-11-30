@@ -57,3 +57,20 @@ if ($_POST)
     }
 
 }
+
+if ($_GET) 
+{
+    try 
+    {
+        
+        $us->__SET('id_categoria_producto', $_GET['delU']);
+        $dtu->deletectgproducto($us->__GET('id_categoria_producto'));
+        header("Location: ../tblctgproducto.php?msj=1") ;
+    }
+    catch(Exception $e)
+    {
+        header("Location: /finalweb/tblctgproducto.php?msj=6");
+        die($e->getMessage());
+    }
+}
+

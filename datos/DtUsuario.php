@@ -51,7 +51,7 @@ class DtUsuario extends conexion
             try
             {
                     $this->myCon= parent ::conectar();
-                    $querysql= "INSERT INTO webk.tbl_usuario (usuario,pwd, nombres, apellidos,email,estado) VALUES (?,?,?,?,?,?)";
+                    $querysql= "INSERT INTO dbkermesse.tbl_usuario (usuario,pwd, nombres, apellidos,email,estado) VALUES (?,?,?,?,?,?)";
 
                     $stm= $this->myCon->prepare($querysql);
                     $stm->execute(array(
@@ -77,7 +77,7 @@ class DtUsuario extends conexion
             try 
             {
                     $this->myCon = parent::conectar();
-                    $querySQL = "SELECT * FROM webk.tbl_usuario WHERE id_usuario = ?;";
+                    $querySQL = "SELECT * FROM dbkermesse.tbl_usuario WHERE id_usuario = ?;";
                     $stm = $this->myCon->prepare($querySQL);
                     $stm->execute(array($id));
                     
@@ -105,7 +105,7 @@ class DtUsuario extends conexion
             try 
             {
                     $this->myCon = parent::conectar();
-                    $sql = "UPDATE webk.tbl_usuario SET
+                    $sql = "UPDATE dbkermesse.tbl_usuario SET
                                             pwd = ?,
                                             nombres = ?, 
                                             apellidos = ?, 
@@ -143,7 +143,7 @@ class DtUsuario extends conexion
 		{
 			$this->myCon = parent::conectar();
 			
-			$querySQL = "SELECT * FROM webk.tbl_usuario WHERE usuario=? AND pwd=? AND estado<>3;";
+			$querySQL = "SELECT * FROM dbkermesse.tbl_usuario WHERE usuario=? AND pwd=? AND estado<>3;";
 
 			$stm = $this->myCon->prepare($querySQL);
 			$stm->execute(array($user, $pwd));
@@ -164,7 +164,7 @@ class DtUsuario extends conexion
                 try 
                 {
                         $this->myCon = parent::conectar();
-                        $sql = "UPDATE webk.tbl_usuario SET
+                        $sql = "UPDATE dbkermesse.tbl_usuario SET
                                                 estado = 3
                                     WHERE id_usuario= ?";
     
