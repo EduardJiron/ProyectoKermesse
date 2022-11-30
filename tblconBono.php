@@ -5,7 +5,7 @@ include 'datos/DtConBono.php';
 include 'entidades/conBono.php';
 
 $dt = new DtConBono();
-$bon= new conBono();
+$par= new conBono();
 
 
 
@@ -20,7 +20,7 @@ if(isset($varMsj))
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="esp">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -204,6 +204,7 @@ if(isset($varMsj))
                                             <th>id</th>
                                             <th>nombre</th>
                                             <th>valor</th>
+                                            <th>estado</th>
                                             <th>opciones</th>
                                             
                                         </tr>
@@ -213,6 +214,12 @@ if(isset($varMsj))
                                         <?php
 
                                         foreach ($dt->listBono() as $r):
+                                            $estadoUser = "";
+                                            if ($r->__GET('estado') == 1 || $r->__GET('estado') == 2) {
+                                                $estadoUser = "Activo";
+                                            } else {
+                                                $estadoUser = "Inactivo";
+                                            }
                                         ?>
 
                                         <tr>
@@ -226,17 +233,17 @@ if(isset($varMsj))
                                         </td>
                                             <td>   <?php echo $r->__GET("valor"); ?>   </td>
                                           
-                                           
+                                            <td> <?php echo $estadoUser ?></td>
 
                                             <td>
                                                 <a href="#" target="_blank" title="Visualizar los datos de un usuario">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </a>&nbsp;
-                                                <a href="editarBono.php" target="_blank" title="Modificar los datos de un usuario">
-                                                    <i class="fa-solid fa-user-pen"></i>
+                                                <a href="editarBono.php?editc=<?php echo $r->__GET('id_bono') ?>" target="_blank" title="Modificar ">
+                                                <i class="fa-solid fa-user-pen"></i>
                                                 </a>&nbsp;
-                                                <a href="#" target="_blank" title="Dar de baja al usuario">
-                                                    <i class="fa-solid fa-user-minus"></i> 
+                                                <a href="#" onclick="deleBono('<?php echo $r->__GET('id_bono');  ?>');" title="Dar de baja Bono">
+                                                    <i class="fa-solid fa-user-minus"></i>
                                                 </a>
                                             </td>
                                             
@@ -288,6 +295,20 @@ endforeach;
 
 
 <script>
+function deleBono(a)
+  {
+    confirm(function(e,btn)
+      { //event + button clicked
+          e.preventDefault();
+          window.location.href = "./negocio/NgControlBono.php?delU="+a;
+          //successAlert('Confirmed!');
+      }, 
+      function(e,btn)
+      {
+          e.preventDefault();
+          //errorAlert('Denied!');
+      });
+  }
 
 $(document).ready(function ()
 {
@@ -298,6 +319,14 @@ $(document).ready(function ()
     if(mensaje == "1")
     {
         successAlert('Éxito', 'Los datos han sido registrados exitosamente!');
+    }
+    if(mensaje == "2")
+    {
+        successAlert('Éxito', 'Los datos han sido modificados exitosamente!');
+    }
+    if(mensaje == "3")
+    {
+        successAlert('Éxito', 'Los datos han sido eliminados exitosamente!');
     }
 
 

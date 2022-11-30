@@ -208,7 +208,7 @@ $par= new Rol();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Rol</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblRol.php">Editar Rol</a></div>
                                             </div>
                                         </form>
                                     </div>

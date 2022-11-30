@@ -166,13 +166,15 @@
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="nombre"name ="Nombre" type="text" placeholder="Enter your first name" />
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
+                                                    <input class="form-control" id="Nombre"name ="Nombre" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>
                                                    
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
+                                                    <input type="hidden" value="1" name="txt" id="txt"/>
                                                     <input class="form-control" id="valor" name ="valor" type="text" placeholder="Contraseña" />
                                                         <label for="inputFirstName">Valor</label>
                                                     </div>

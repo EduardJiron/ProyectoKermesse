@@ -1,7 +1,7 @@
 <?php
 class conBono{
 private $id_bono;
-private $nombe;
+private $nombre;
 private $valor;
 private $estado;
 

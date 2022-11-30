@@ -166,6 +166,7 @@
 
                                         <div class="row mb-3">
                                                 <div class="col-md-6">
+                                                <input type="hidden" value="1" name="txt" id="txt"/>
                                                     <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="nombre" name ="nombre" type="text" placeholder="Enter your first name" />
                                                         <label for="inputFirstName">Nombre</label>

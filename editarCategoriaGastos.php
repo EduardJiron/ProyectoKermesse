@@ -208,7 +208,7 @@ $par= new CategoriaGastos();
                                             
                                             <div class="form-floating mb-3" style="width: 510px; left: 15px;">                                
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblparroquia.php">Editar Categoría de Gastos</a></div>
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="tblCategoriaGastos.php">Editar Categoría</a></div>
                                             </div>
                                         </form>
                                     </div>

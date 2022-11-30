@@ -22,14 +22,14 @@ class DtConBono extends conexion
 
                     foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
                     {
-                            $bon= new conBono();
-                            $bon->__SET('id_bono', $r->id_bono);
-                            $bon->__SET('nombre', $r->nombre);
-                            $bon->__SET('valor', $r->valor);
-                            $bon->__SET('estado', $r->estado);
+                            $par= new conBono();
+                            $par->__SET('id_bono', $r->id_bono);
+                            $par->__SET('nombre', $r->nombre);
+                            $par->__SET('valor', $r->valor);
+                            $par->__SET('estado', $r->estado);
                     
 
-                            $result[]=$bon;
+                            $result[]=$par;
                     }
                     
                     $this->myCon= parent ::desconectar();
@@ -66,6 +66,92 @@ class DtConBono extends conexion
                     die($e->getMessage());
             }
     }
+    public function getcomrByID($id)
+    {
+            try 
+            {
+                    $this->myCon = parent::conectar();
+                    $querySQL = "SELECT * FROM dbkermesse.tbl_control_bonos WHERE id_bono = ?;";
+                    $stm = $this->myCon->prepare($querySQL);
+                    $stm->execute(array($id));
+                    
+                    $r = $stm->fetch(PDO::FETCH_OBJ);
+
+                    $u = new conBono();
+
+                    //_SET(CAMPOBD, atributoEntidad)			
+                    $u->__SET('id_bono', $r->id_bono);
+                    $u->__SET('nombre', $r->nombre);
+                    $u->__SET('valor', $r->valor);
+                    $u->__SET('estado', $r->estado);
+                
+
+                    $this->myCon = parent::desconectar();
+                    return $u;
+            } 
+            catch (Exception $e) 
+            {
+                    die($e->getMessage());
+            }
+    }
+
+    
+    public function editBonos( conBono $tu)
+    {
+            try 
+            {
+                    $this->myCon = parent::conectar();
+                    $sql = "UPDATE dbkermesse.tbl_control_bonos SET
+                                           
+                                            nombre= ?,
+                                            valor= ?,
+                                            estado= ?
+                                          
+                                WHERE id_bono= ?";
+
+                            $this->myCon->prepare($sql)
+                         ->execute(
+                            array(
+                                    //$tu->__GET('usuario'), 
+                                    
+                                    $tu->__GET('nombre'),
+                                    $tu->__GET('valor'),
+                                    $tu->__GET('estado'),
+                                    $tu ->__GET('id_bono')
+
+
+                                    )
+                            );
+                            $this->myCon = parent::desconectar();
+            } 
+            catch (Exception $e) 
+            {
+                    var_dump($e);
+                    die($e->getMessage());
+            }
+    }
+
+    public function deleBono($id)
+        {
+                try 
+                {
+                        $this->myCon = parent::conectar();
+                        $sql = "UPDATE dbkermesse.tbl_control_bonos SET
+                                                estado = 3
+                                    WHERE id_bono= ?";
+    
+                        $stm = $this->myCon->prepare($sql);
+                        $stm->execute(array($id)
+                    );
+    
+                        $this->myCon = parent::desconectar();
+                } 
+                catch (Exception $e) 
+                {
+                        var_dump($e);
+                        die($e->getMessage());
+                }
+        }
 
 
 }
